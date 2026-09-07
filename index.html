@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boundless Training &amp; Rehab — Doctor-led rehab and performance, Tampa</title>
+<meta name="description" content="Doctor-led rehabilitation and performance training in Tampa, FL. Dr. Brandon, DPT. Cleared isn't ready — we train the gap.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="boundless.css">
+<style>
+/* ── hero ── */
+.hero{background:var(--night);color:var(--bone);overflow:hidden;display:flex;align-items:center;justify-content:center;padding:110px 0 84px;min-height:100svh}
+.hero .vig{position:absolute;inset:0;background:radial-gradient(ellipse 66% 60% at 50% 48%,rgba(252,189,0,.12),transparent 64%);pointer-events:none}
+.stage{position:relative;z-index:6;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 var(--pad)}
+.mark{width:min(430px,82vw);opacity:0;animation:reveal 1.4s .2s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes reveal{0%{opacity:0;transform:scale(.74)}55%{opacity:1}100%{opacity:1;transform:scale(1)}}
+.tag{margin-top:26px;font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(26px,8.4vw,50px);line-height:.98;letter-spacing:-.04em;text-transform:uppercase;opacity:0;animation:up .9s 1s forwards}
+.sublede{margin:18px auto 0;max-width:540px;font-size:15px;line-height:1.7;color:var(--txtd);opacity:0;animation:up .9s 1.2s forwards}
+.hero-cta{margin-top:28px;display:flex;flex-direction:column;gap:10px;width:100%;max-width:320px;opacity:0;animation:up .9s 1.4s forwards}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.kicker{position:absolute;top:82px;left:var(--pad);right:var(--pad);z-index:7;color:var(--gold);opacity:0;animation:up .8s .8s forwards}
+.kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--fire);animation:beat 1.5s ease-in-out infinite;flex:none}
+@keyframes beat{0%,100%{box-shadow:0 0 0 0 var(--fireGlow)}50%{box-shadow:0 0 0 10px var(--fireGlow0)}}
+.hero-foot{display:none}
+
+/* ── the gap (light) ── */
+.gap{background:var(--snow);color:var(--ink);padding:66px 0 74px;overflow:hidden}
+.gap-in{position:relative;z-index:2}
+.gap h2{font-size:clamp(30px,9vw,80px);margin-top:14px;line-height:.92;color:var(--night)}
+.gap .g{color:var(--dawn)}
+.gap .eyebrow{color:var(--dawn)}
+.stages{margin-top:44px;display:flex;flex-direction:column;gap:0}
+.stg{position:relative;border-top:2px solid var(--lineL);padding:18px 0 22px}
+.stg .lb{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase;letter-spacing:.02em;margin-top:0;color:var(--horizon)}
+.stg.in .lb{color:var(--dawn)}
+.stg .nt{font-size:14px;line-height:1.6;color:var(--txt);margin-top:6px;max-width:340px}
+.stg.in{border-top-color:var(--gold);background:linear-gradient(180deg,rgba(252,189,0,.16),rgba(252,189,0,0) 72%)}
+.stg .tag{position:absolute;top:18px;right:0;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--goldd);display:flex;align-items:center;gap:7px;line-height:1}
+.stg.in .lb,.stg.in .nt{padding-right:104px}
+.gap-cap{margin-top:34px;border-left:2px solid var(--gold);padding:4px 0 4px 18px}
+.gap-cap .t{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase;letter-spacing:-.02em;color:var(--dawn)}
+.gap-cap .s{font-size:14px;line-height:1.6;color:var(--txt);margin-top:7px;max-width:420px}
+
+/* ── services ── */
+.svc{padding:66px 0 74px;background:var(--horizon)}
+.svc .eyebrow{color:var(--snow)}
+.svc h2{color:var(--dawn)}
+.grid3 .cell{background:var(--snow);border-color:var(--horizon);transition:background .2s,border-color .2s,transform .2s}
+.grid3 .cell:hover{background:var(--mist);border-color:var(--gold);box-shadow:inset 0 0 0 2px var(--gold);transform:scale(1.02);position:relative;z-index:2}
+.grid3{display:grid;grid-template-columns:1fr;border-top:2px solid var(--horizon)}
+.cell{padding:30px 0 34px;border-bottom:2px solid var(--horizon);display:flex;flex-direction:column}
+.ic{width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:var(--horizon);color:var(--gold);font-size:19px;flex:none}
+.cell h3{font-size:23px;margin:20px 0 10px;line-height:1;font-weight:700}
+.cell p{font-size:14.5px;line-height:1.65;color:var(--txt);flex:1}
+.cell.ask{background:var(--mist);color:var(--night);padding:30px 24px 34px}
+.cell.ask .ic{background:var(--horizon);color:var(--gold)}
+.cell.ask h3{color:var(--night)}
+.cell.ask p{color:var(--night)}
+.cell.ask .btn{margin-top:22px;align-self:flex-start}
+
+/* ── method ── */
+.method{padding:66px 0 74px;background:var(--night);color:var(--bone)}
+.phases{display:grid;grid-template-columns:1fr;gap:0}
+.ph{padding:26px 0 30px;border-top:2px solid var(--gold)}
+.ph:first-child{border-top:none;padding-top:0}
+.ph .tm{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.ph h3{font-size:24px;margin:12px 0 10px}
+.ph p{font-size:14.5px;line-height:1.7;color:var(--snow)}
+.method .after{margin-top:36px}
+
+/* ── stats ── */
+.stats{background:var(--gold);color:var(--night);padding:52px 0 56px}
+.stats-g{display:grid;grid-template-columns:1fr 1fr;gap:30px 22px}
+.stat .v{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(42px,13vw,72px);line-height:.88;letter-spacing:-.05em}
+.stat .v sup{font-size:.36em;vertical-align:super;margin-left:2px}
+.stat .k{margin-top:10px;font-size:13px;line-height:1.5;color:var(--night)}
+
+/* ── doctor ── */
+.doc{padding:66px 0 74px;background:var(--snow)}
+.doc .eyebrow{color:var(--dawn)}
+.doc h2{color:var(--night)}
+.doc .g{color:var(--dawn)}
+.portrait{position:relative;border:2px solid var(--ink);aspect-ratio:4/5;background:var(--sand);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--mut);text-align:center;padding:24px}
+.portrait i{font-size:34px}
+.portrait span{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;line-height:1.7}
+.portrait .badge{position:absolute;right:-2px;bottom:-2px;background:var(--gold);color:var(--ink);padding:11px 15px;font-family:'Archivo',sans-serif;font-weight:900;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+.doc .body{margin-top:34px}
+.doc .body h2{font-size:clamp(28px,8vw,52px);margin-bottom:20px}
+.doc .body p{font-size:16px;line-height:1.75;color:var(--txt)}
+.doc .body p+p{margin-top:16px}
+.creds{margin-top:30px;display:grid;gap:12px}
+.cred{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;padding-top:13px;border-top:1px solid var(--chalk)}
+.cred i{color:var(--dawn);font-size:14px;margin-top:2px;flex:none}
+
+/* ── youth ── */
+.youth{padding:66px 0 74px;background:var(--horizon)}
+.youth .eyebrow{color:var(--snow)}
+.youth h2{color:var(--dawn)}
+.y-g{display:grid;grid-template-columns:1fr;border-top:2px solid var(--night)}
+.yc{padding:30px 0 34px;border-bottom:2px solid var(--night);background:var(--snow)}
+.yc .who{display:inline-flex;align-items:center;gap:9px;background:var(--night);color:var(--gold);padding:8px 13px;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+.yc h3{font-size:clamp(23px,6.6vw,32px);margin:20px 0 14px;color:var(--night)}
+.yc p{font-size:15px;line-height:1.7;color:var(--txt)}
+.pts{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:11px}
+.pts li{display:flex;gap:11px;font-size:14px;line-height:1.55}
+.pts i{color:var(--goldd);font-size:11px;margin-top:5px;flex:none}
+
+/* ── fit ── */
+.yc .pts i{color:var(--dawn)}
+.fit{padding:66px 0 74px;background:var(--night);color:var(--bone)}
+.fit-g{display:grid;grid-template-columns:1fr;border-top:2px solid var(--mist)}
+.col{padding:28px 0 32px;border-bottom:1px solid var(--lineD2)}
+.col h3{font-size:23px;margin-bottom:20px;display:flex;align-items:center;gap:11px}
+.col h3 i{font-size:17px}
+.col.yes h3 i{color:var(--gold)}.col.no h3 i{color:var(--fire)}
+.col ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.col li{display:flex;gap:12px;font-size:14.5px;line-height:1.55;color:var(--txtd)}
+.col li i{font-size:11px;margin-top:5px;flex:none}
+.col.yes li i{color:var(--gold)}.col.no li i{color:#6B6660}
+
+/* ── faq (details) ── */
+.faq{padding:66px 0 74px;background:var(--snow)}
+.faq .eyebrow{color:var(--dawn)}
+.faq h2{color:var(--night)}
+.qa{border-top:2px solid var(--horizon)}
+.qa:last-of-type{border-bottom:2px solid var(--horizon)}
+.qa summary{list-style:none;cursor:pointer;display:flex;gap:16px;align-items:center;justify-content:space-between;padding:22px 0;font-family:'Archivo',sans-serif;font-weight:900;font-size:17px;text-transform:uppercase;letter-spacing:-.02em}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary span{color:var(--night)}
+.qa summary i{color:var(--dawn);font-size:15px;transition:transform .3s;flex:none}
+.qa[open] summary i{transform:rotate(45deg)}
+.qa p{padding:0 0 24px;font-size:15px;line-height:1.75;color:var(--txt);max-width:760px}
+
+/* ── book + intake ── */
+.book{background:var(--horizon);color:var(--bone);padding:70px 0 78px;overflow:hidden}
+.book .bfield{opacity:.4;width:min(900px,150vw)}
+.book-in{position:relative;z-index:2}
+.book h2{font-size:clamp(30px,9vw,70px);margin-top:14px;color:var(--mist)}
+.book .g{color:var(--gold)}
+.book .eyebrow{color:var(--snow)}
+.book .lede{margin-top:20px;font-size:16px;line-height:1.7;color:var(--snow);max-width:460px}
+.book .cta2{margin-top:26px;display:flex;flex-direction:column;gap:10px;max-width:320px}
+.form-card{background:var(--bone);color:var(--ink);padding:26px 22px 30px;margin-top:44px}
+.form-card h3{font-size:24px}
+.form-card .fnote{font-size:13.5px;line-height:1.65;color:var(--txt);margin:10px 0 24px}
+.frow{display:grid;gap:0}
+.fld{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.fld label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.fld input,.fld select,.fld textarea{font-family:'Sora',sans-serif;font-size:16px;color:var(--ink);background:transparent;border:none;border-bottom:2px solid var(--chalk);padding:10px 2px;outline:none;transition:border-color .25s;border-radius:0;-webkit-appearance:none;appearance:none}
+.fld textarea{resize:vertical;min-height:84px;line-height:1.6}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--gold)}
+.fld input:user-invalid{border-color:var(--fire)}
+.fld input::placeholder,.fld textarea::placeholder{color:var(--txtd)}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pills input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.pills label{display:inline-flex;align-items:center;min-height:44px;padding:10px 15px;box-shadow:inset 0 0 0 2px var(--chalk);cursor:pointer;font-family:'Archivo',sans-serif;font-weight:900;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);transition:.22s}
+.pills input:focus-visible+label{box-shadow:inset 0 0 0 2px var(--ink)}
+.pills label:hover{box-shadow:inset 0 0 0 2px var(--ink);color:var(--ink)}
+.pills input:checked+label{background:var(--ink);color:var(--gold);box-shadow:inset 0 0 0 2px var(--ink)}
+.fsub{display:flex;flex-direction:column;gap:14px;margin-top:24px;padding-top:20px;border-top:2px solid var(--ink)}
+.fsub .fine{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);line-height:1.7}
+
+@media(min-width:700px){
+  .hero-cta{flex-direction:row;max-width:none;justify-content:center}
+  .hero .mark{width:min(520px,66vw)}
+  .grid3{grid-template-columns:1fr 1fr;border:2px solid var(--horizon);border-bottom:none}
+  .cell{padding:32px 26px 36px;border-left:2px solid var(--horizon)}
+  .cell:nth-child(2n+1){border-left:none}
+  .cell.ask{padding:32px 26px 36px}
+  .phases{grid-template-columns:1fr 1fr;gap:0 30px}
+  .ph:nth-child(2){padding-top:0;border-top:none}
+  .stats-g{grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:0 24px;border-left:2px solid var(--lineL)}
+  .stat:first-child{border-left:none;padding-left:0}
+  .doc-g{display:grid;grid-template-columns:.8fr 1fr;gap:44px;align-items:start}
+  .doc .body{margin-top:0}
+  .creds{grid-template-columns:1fr 1fr;gap:12px 24px}
+  .y-g{grid-template-columns:1fr 1fr;border:2px solid var(--night)}
+  .yc{padding:32px 28px 36px;border-bottom:none}
+  .yc+.yc{border-left:2px solid var(--night)}
+  .fit-g{grid-template-columns:1fr 1fr;border:2px solid var(--mist)}
+  .col{padding:32px 28px 36px;border-bottom:none}
+  .col+.col{border-left:2px solid var(--mist)}
+  .qa summary{font-size:21px;padding:26px 0}
+  .frow{grid-template-columns:1fr 1fr;gap:0 18px}
+  .form-card{padding:34px 32px 38px}
+  .fsub{flex-direction:row;align-items:center;gap:18px}
+  .fsub .fine{max-width:210px}
+  .book .cta2{flex-direction:row;max-width:none}
+}
+@media(min-width:1040px){
+  .hero{padding:130px 0 96px}
+  .tag{margin-top:34px}
+  .kicker{top:104px;display:flex;gap:12px;align-items:center}
+  .hero-foot{display:flex;position:absolute;bottom:28px;left:var(--pad);right:var(--pad);justify-content:space-between;align-items:flex-end;color:var(--mutd);z-index:7;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:0;animation:up .8s 1.6s forwards}
+  .scrollcue{display:flex;gap:10px;align-items:center}
+  .scrollcue i{display:block;width:1px;height:28px;background:var(--gold);animation:cue 1.9s ease-in-out infinite;transform-origin:top}
+  @keyframes cue{0%,100%{transform:scaleY(.25);opacity:.3}50%{transform:scaleY(1);opacity:1}}
+  .gap{padding:104px 0 116px}
+  .stages{margin-top:70px;flex-direction:row;gap:0}
+  .stg{flex:1;padding:20px 22px 26px 0}
+  .stg.in{padding-left:18px;padding-right:18px}
+  .stg .tag{top:20px;right:18px}
+  .stg.in .lb,.stg.in .nt{padding-right:0}
+  .stg .nt{max-width:none}
+  .zone span{top:-30px;right:auto;left:12px}
+  .stages::before{left:0;right:0;top:0;bottom:auto;width:auto;height:3px}
+  .stages .fill{left:0;top:0;height:3px;width:100%}
+  @supports (animation-timeline:view()){.stages .fill{width:0;height:3px;animation-name:fillRight}}
+  @keyframes fillRight{to{width:100%}}
+  .stg{padding:34px 20px 0 0}
+  .stg::before{left:0;top:-5px}
+  .stg.hot::after{content:"";position:absolute;left:0;right:-24px;top:-1.5px;height:3px;background:var(--gold);opacity:.4}
+  .gap-cap{margin-top:44px;max-width:520px}
+  .gap-cap .t{font-size:24px}
+  .svc,.method,.doc,.youth,.fit,.faq{padding:104px 0 116px}
+  .book{padding:112px 0 120px}
+  .stats{padding:78px 0 84px}
+  .grid3{grid-template-columns:repeat(3,1fr)}
+  .cell{min-height:274px;border-left:2px solid var(--horizon);transition:background .35s,color .35s,border-color .35s}
+  .cell:nth-child(2n+1){border-left:2px solid var(--horizon)}
+  .cell:nth-child(3n+1){border-left:none}
+  .cell:not(.ask):hover{background:var(--mist);color:var(--ink)}
+  .cell:not(.ask):hover p{color:var(--txt)}
+  .cell:not(.ask):hover .ic{background:var(--horizon);color:var(--gold)}
+  .phases{grid-template-columns:repeat(4,1fr);gap:0}
+  .ph{padding:26px 24px 0 0;border-top:2px solid var(--gold)}
+  .ph+.ph{padding-left:24px;border-left:1px solid var(--lineD2)}
+  .ph:nth-child(2){padding-top:26px;border-top:2px solid var(--gold)}
+  .doc-g{grid-template-columns:.75fr 1fr;gap:64px}
+  .book-in{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start}
+  .form-card{margin-top:0}
+}
+</style>
+</head>
+<body>
+<div class="prog"></div>
+<input class="navchk" type="checkbox" id="navToggle" aria-label="Open menu">
+<header class="nav">
+  <a class="brand" href="#top"><img src="assets/logo-boundless.png" alt="Boundless Training &amp; Rehab"></a>
+  <nav class="links">
+    <a href="#gap">The Gap</a>
+    <a href="#services">Services</a>
+    <a href="Boundless — Method.html">Method</a>
+    <a href="#doctor">Dr. Brandon</a>
+    <a href="#youth">Youth</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="navcta">
+    <a class="btn gold sm" href="#intake"><i class="fa-solid fa-pen-to-square"></i>Consult</a>
+    <label class="navtog" for="navToggle"><i class="fa-solid fa-bars"></i></label>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero dark" id="top" data-screen-label="Hero">
+  <div class="vig"></div>
+  <div class="field">
+    <svg viewBox="0 0 1200 1200" aria-hidden="true">
+      <defs>
+        <path id="p1" d="M 600 100 A 500 500 0 1 1 599 100"/>
+        <path id="p2" d="M 600 200 A 400 400 0 1 0 601 200"/>
+        <path id="p3" d="M 600 310 A 290 290 0 1 1 599 310"/>
+      </defs>
+      <circle class="ln ping" cx="600" cy="600" r="360" stroke-width="1.5"/>
+      <circle class="ln ping" cx="600" cy="600" r="360" stroke-width="1.5" style="animation-delay:1.4s"/>
+      <circle class="ln ping" cx="600" cy="600" r="360" stroke-width="1.5" style="animation-delay:2.8s"/>
+      <g class="spin-a"><circle class="ln march" cx="600" cy="600" r="560" stroke-width="1.5" opacity=".7"/></g>
+      <g class="spin-d">
+        <circle class="ln" cx="600" cy="600" r="520" stroke-width="1" opacity=".18"/>
+        <g opacity=".55">
+          <line class="ln" x1="600" y1="40" x2="600" y2="84" stroke-width="2"/>
+          <line class="ln" x1="600" y1="1116" x2="600" y2="1160" stroke-width="2"/>
+          <line class="ln" x1="40" y1="600" x2="84" y2="600" stroke-width="2"/>
+          <line class="ln" x1="1116" y1="600" x2="1160" y2="600" stroke-width="2"/>
+        </g>
+      </g>
+      <g class="spin-b"><circle class="ln march" cx="600" cy="600" r="440" stroke-width="1.5" opacity=".85" style="stroke-dasharray:3 30"/></g>
+      <g class="spin-c">
+        <path class="ln" d="M 600 220 A 380 380 0 0 1 929 410" stroke-width="3" opacity=".95"/>
+        <path class="ln" d="M 271 790 A 380 380 0 0 1 271 410" stroke-width="3" opacity=".55"/>
+      </g>
+      <circle class="ln" cx="600" cy="600" r="330" stroke-width="1" opacity=".2"/>
+      <g class="spin-b"><circle class="ln march" cx="600" cy="600" r="330" stroke-width="1.5" opacity=".6"/></g>
+      <path class="ln march2" d="M -40 900 Q 600 -120 1240 900" stroke-width="2.5" opacity=".9"/>
+      <path class="ln march2" d="M -40 1020 Q 600 60 1240 1020" stroke-width="1.5" opacity=".45" style="animation-delay:1.6s"/>
+      <path class="ln march2" d="M 60 1200 Q 600 240 1140 1200" stroke-width="1.5" opacity=".3" style="animation-delay:3.2s"/>
+      <circle r="6" fill="var(--gold)"><animateMotion dur="14s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+      <circle r="4.5" fill="#FF3B00"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+      <circle r="4" fill="var(--gold)" opacity=".8"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
+      <circle r="3" fill="var(--gold)" opacity=".55"><animateMotion dur="11s" begin="-4s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+    </svg>
+  </div>
+  <div class="kicker eyebrow"><span class="dot"></span><span>Now accepting new patients · Tampa, FL</span></div>
+  <div class="stage">
+    <div class="mark"><img src="assets/logo-full.png" alt="Boundless Training and Rehab"></div>
+    <h1 class="tag"><span class="h">Bodies weren't</span> <span class="g">built to sit still.</span></h1>
+    <p class="sublede">Doctor-led rehabilitation and performance training for people who intend to get all the way back — not just out of pain.</p>
+    <div class="hero-cta">
+      <a class="btn gold" href="#intake"><i class="fa-solid fa-pen-to-square"></i>Request a consult</a>
+      <a class="btn ol" href="Boundless — Method.html"><i class="fa-solid fa-diagram-project"></i>See the method</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="scrollcue"><i></i><span>Scroll</span></div>
+    <div>Dr. Brandon · DPT &nbsp;·&nbsp; 1:1 by appointment</div>
+  </div>
+</section>
+
+<div class="band"><div class="mq">
+  <span>Return to sport <i class="fa-solid fa-diamond"></i> <em>Strength</em> <i class="fa-solid fa-diamond"></i> Post-op <i class="fa-solid fa-diamond"></i> <em>Mobility</em> <i class="fa-solid fa-diamond"></i> Load management <i class="fa-solid fa-diamond"></i> <em>Longevity</em> <i class="fa-solid fa-diamond"></i></span>
+  <span>Return to sport <i class="fa-solid fa-diamond"></i> <em>Strength</em> <i class="fa-solid fa-diamond"></i> Post-op <i class="fa-solid fa-diamond"></i> <em>Mobility</em> <i class="fa-solid fa-diamond"></i> Load management <i class="fa-solid fa-diamond"></i> <em>Longevity</em> <i class="fa-solid fa-diamond"></i></span>
+</div></div>
+
+<!-- ═══ THE GAP ═══ -->
+<section class="gap" id="gap" data-screen-label="The Gap">
+  <div class="wrap gap-in">
+    <p class="eyebrow">The thesis</p>
+    <h2>Everyone treats the injury.<br><span class="g">Nobody trains the gap.</span></h2>
+    <div class="stages">
+      <div class="stg"><div class="lb">Injured</div><p class="nt">Something tore, strained, or gave out.</p></div>
+      <div class="stg"><div class="lb">Pain-free</div><p class="nt">The symptoms quiet down. Most plans start winding up here.</p></div>
+      <div class="stg in"><span class="tag"><i class="fa-solid fa-diamond" style="font-size:7px"></i>In the gap</span><div class="lb">Cleared</div><p class="nt">You get the green light — with your strength still 30% down.</p></div>
+      <div class="stg in"><div class="lb">Ready</div><p class="nt">Tested, loaded, and trusted at full speed. This is the finish line.</p></div>
+    </div>
+    <div class="gap-cap">
+      <div class="t">The Boundless gap</div>
+      <p class="s">Cleared by a doctor is not the same as ready for your sport. Closing that stretch is the entire practice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="svc" id="services" data-screen-label="Services">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">What we do</p><h2>Eight lanes, one system.</h2></div>
+    <div class="grid3">
+      <div class="cell"><div class="ic"><i class="fa-solid fa-bone"></i></div><h3>Post-op rehab</h3><p>Structured progression after surgery — ACL, shoulder, hip, spine. Milestones tied to measured capacity, not the calendar.</p></div>
+      <div class="cell"><div class="ic"><i class="fa-solid fa-person-running"></i></div><h3>Return to sport</h3><p>The phase most programs skip. Sprint mechanics, cutting, contact tolerance, and the testing that says you're actually cleared.</p></div>
+      <div class="cell"><div class="ic"><i class="fa-solid fa-dumbbell"></i></div><h3>Strength &amp; performance</h3><p>Barbell and field-based programming built on your rehab history — so getting stronger doesn't re-open old problems.</p></div>
+      <div class="cell"><div class="ic"><i class="fa-solid fa-clipboard-list"></i></div><h3>Movement assessment</h3><p>A full-body screen with force, range, and asymmetry data. You leave with numbers and a plan, not a vague verdict.</p></div>
+      <div class="cell"><div class="ic"><i class="fa-solid fa-gauge-high"></i></div><h3>Pain &amp; load management</h3><p>Tendons, backs, and nagging joints. We change the load before we change the activity you love.</p></div>
+      <div class="cell"><div class="ic"><i class="fa-solid fa-heart-pulse"></i></div><h3>Longevity coaching</h3><p>For the forty-plus athlete. Keep training hard for decades by building the tissue and habits that make it survivable.</p></div>
+      <div class="cell"><div class="ic"><i class="fa-solid fa-child-reaching"></i></div><h3>Youth athlete</h3><p>Middle school and up. Growing bodies, stacked seasons, and the overuse patterns that follow — handled before they become surgeries.</p></div>
+      <div class="cell"><div class="ic"><i class="fa-solid fa-video"></i></div><h3>Remote programming</h3><p>Written programming with video check-ins for athletes who train elsewhere or pass through Tampa on a schedule.</p></div>
+      <div class="cell ask"><div class="ic"><i class="fa-solid fa-circle-question"></i></div><h3>Not sure which one?</h3><p>That's what the consult is for. Describe what's going on and we'll tell you whether this is the right room.</p><a class="btn gold sm" href="#intake"><i class="fa-solid fa-pen-to-square"></i>Start here</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METHOD ═══ -->
+<section class="method dark" data-screen-label="Method">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">The method</p><h2>Assess. Rebuild.<br>Load. Release.</h2></div>
+    <div class="phases">
+      <div class="ph"><div class="tm">Visit 1</div><h3>Assess</h3><p>Ninety minutes, one-on-one. History, movement screen, strength and range testing. We find the actual limiter, not the loudest symptom.</p></div>
+      <div class="ph"><div class="tm">Weeks 1–4</div><h3>Rebuild</h3><p>Restore range, calm the irritated tissue, and rebuild the base capacity the injured area lost. Hands-on work only where it earns its place.</p></div>
+      <div class="ph"><div class="tm">Weeks 4–10</div><h3>Load</h3><p>Progressive loading against measured targets — force, tolerance, speed. This is where rehab becomes training and the gap closes.</p></div>
+      <div class="ph"><div class="tm">Weeks 10–12</div><h3>Release</h3><p>Sport-specific testing and a written program you keep. You leave with a standard to hold yourself to, not a hope.</p></div>
+    </div>
+    <div class="after"><a class="btn gold" href="Boundless — Method.html"><i class="fa-solid fa-diagram-project"></i>The method in full</a></div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section class="stats" data-screen-label="Numbers">
+  <div class="wrap">
+    <div class="stats-g">
+      <div class="stat"><div class="v">90<sup>min</sup></div><div class="k">Initial evaluation — the whole hour and a half is yours</div></div>
+      <div class="stat"><div class="v">1<sup>:1</sup></div><div class="k">Every session with the doctor. No techs, no handoffs</div></div>
+      <div class="stat"><div class="v">12<sup>wk</sup></div><div class="k">Typical protocol from first visit to full clearance</div></div>
+      <div class="stat"><div class="v">0</div><div class="k">Patients sent home with "rest it and see"</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DOCTOR ═══ -->
+<section class="doc" id="doctor" data-screen-label="Dr. Brandon">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Who you'll work with</p><h2>Dr. Brandon, DPT</h2></div>
+    <div class="doc-g">
+      <div class="portrait">
+        <i class="fa-solid fa-camera"></i>
+        <span>Portrait<br>to come</span>
+        <div class="badge">Dr. Brandon · DPT</div>
+      </div>
+      <div class="body">
+        <h2>Rehab that<br><span class="h">doesn't stop</span><br><span class="g">at pain-free.</span></h2>
+        <p>Boundless exists because of a pattern I kept seeing: patients discharged the moment their pain went away, handed a sheet of exercises, and left to figure out the rest alone. Six weeks later they're back — same injury, same story.</p>
+        <p>Pain-free is a checkpoint. Ready is the goal. Every plan here is built to carry you all the way from one to the other, with a number attached to every milestone so neither of us has to guess.</p>
+        <div class="creds">
+          <div class="cred"><i class="fa-solid fa-user-doctor"></i><span>Doctor of Physical Therapy, licensed clinician</span></div>
+          <div class="cred"><i class="fa-solid fa-certificate"></i><span>Strength &amp; conditioning certified</span></div>
+          <div class="cred"><i class="fa-solid fa-people-group"></i><span>Background with post-op and field-sport athletes</span></div>
+          <div class="cred"><i class="fa-solid fa-stopwatch"></i><span>Every session led by the doctor, start to finish</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ YOUTH ═══ -->
+<section class="youth" id="youth" data-screen-label="Youth">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Young athletes · middle school and up</p><h2>Growing bodies<br>break differently.</h2></div>
+    <div class="y-g">
+      <div class="yc">
+        <span class="who"><i class="fa-solid fa-user-group"></i>For the parent</span>
+        <h3>It's usually volume,<br>not bad luck.</h3>
+        <p>Three seasons stacked on one body, a single sport year-round, or a growth spurt that outran the tendons. Treating the sore spot without touching the cause guarantees a repeat.</p>
+        <ul class="pts">
+          <li><i class="fa-solid fa-play"></i><span>A plan written around their growth stage and season calendar</span></li>
+          <li><i class="fa-solid fa-play"></i><span>You're welcome in the room for the evaluation</span></li>
+          <li><i class="fa-solid fa-play"></i><span>Clear communication with coaches and trainers when you want it</span></li>
+        </ul>
+      </div>
+      <div class="yc">
+        <span class="who"><i class="fa-solid fa-bolt"></i>For the athlete</span>
+        <h3>Nobody's telling<br>you to sit out.</h3>
+        <p>You don't have to hide the pain to keep playing. We find out what your body can handle right now, train the parts that are behind, and get you back to full speed without losing the season to guesswork.</p>
+        <ul class="pts">
+          <li><i class="fa-solid fa-play"></i><span>You'll know exactly what your numbers are and what they need to be</span></li>
+          <li><i class="fa-solid fa-play"></i><span>Real training, not stretches on a mat in a hallway</span></li>
+          <li><i class="fa-solid fa-play"></i><span>Straight answers about what's actually going on</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FIT ═══ -->
+<section class="fit dark" data-screen-label="Fit">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Honest about fit</p><h2>Is this you?</h2></div>
+    <div class="fit-g">
+      <div class="col yes">
+        <h3><i class="fa-solid fa-circle-check"></i>A good fit</h3>
+        <ul>
+          <li><i class="fa-solid fa-play"></i><span>You were discharged from PT but still don't trust the knee, shoulder, or back.</span></li>
+          <li><i class="fa-solid fa-play"></i><span>You're post-op and want a plan that ends at your sport, not at a range-of-motion goal.</span></li>
+          <li><i class="fa-solid fa-play"></i><span>You lift, run, or compete and want to keep doing it for another twenty years.</span></li>
+          <li><i class="fa-solid fa-play"></i><span>You'd rather have hard numbers than reassurance.</span></li>
+        </ul>
+      </div>
+      <div class="col no">
+        <h3><i class="fa-solid fa-circle-xmark"></i>Not a fit</h3>
+        <ul>
+          <li><i class="fa-solid fa-minus"></i><span>You want passive care — heat, stim, and a table nap.</span></li>
+          <li><i class="fa-solid fa-minus"></i><span>You need urgent or emergency medical evaluation.</span></li>
+          <li><i class="fa-solid fa-minus"></i><span>You're looking for the fastest possible discharge note.</span></li>
+          <li><i class="fa-solid fa-minus"></i><span>You don't want to do work between sessions.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq" id="faq" data-screen-label="FAQ">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Before you book</p><h2>Questions.</h2></div>
+    <details class="qa"><summary><span>Do I need a referral?</span><i class="fa-solid fa-plus"></i></summary><p>In most cases no — you can be evaluated directly. If your situation needs a physician's input, we'll tell you at the evaluation and coordinate rather than string you along.</p></details>
+    <details class="qa"><summary><span>How does payment work?</span><i class="fa-solid fa-plus"></i></summary><p>We'll walk you through the options at the consult, including documentation you can submit for out-of-network reimbursement or HSA/FSA use. You'll know the exact cost of your plan before you commit to it.</p></details>
+    <details class="qa"><summary><span>How is this different from regular PT?</span><i class="fa-solid fa-plus"></i></summary><p>Two things: you work with the doctor every session, and the plan doesn't end when the pain does. Most clinics discharge at pain-free. We keep going until you've tested ready for the thing you actually want to do.</p></details>
+    <details class="qa"><summary><span>What should I bring to the first visit?</span><i class="fa-solid fa-plus"></i></summary><p>Training clothes you can move and sweat in, any imaging or surgical notes you have, and a clear idea of the activity you want to get back to. That goal shapes the whole plan.</p></details>
+    <details class="qa"><summary><span>Can you work with me remotely?</span><i class="fa-solid fa-plus"></i></summary><p>Yes — remote programming and video check-ins are available once we've done an in-person evaluation, or on their own for straightforward strength and load management work.</p></details>
+    <details class="qa"><summary><span>How young do you go?</span><i class="fa-solid fa-plus"></i></summary><p>Middle school and up. Younger athletes get a plan written around their growth stage and season calendar, and parents are welcome in the room for the evaluation.</p></details>
+  </div>
+</section>
+
+<!-- ═══ BOOK ═══ -->
+<section class="book dark" id="book" data-screen-label="Book">
+  <div class="bfield">
+    <svg viewBox="0 0 1200 1200" aria-hidden="true">
+      <circle class="ln ping" cx="600" cy="600" r="380" stroke-width="1.5"/>
+      <circle class="ln ping" cx="600" cy="600" r="380" stroke-width="1.5" style="animation-delay:2.1s"/>
+      <g class="spin-a"><circle class="ln march" cx="600" cy="600" r="520" stroke-width="1.5" opacity=".55"/></g>
+      <g class="spin-b"><circle class="ln march" cx="600" cy="600" r="400" stroke-width="1.5" opacity=".6" style="stroke-dasharray:3 30"/></g>
+    </svg>
+  </div>
+  <div class="wrap book-in">
+    <div>
+      <p class="eyebrow">Start here</p>
+      <h2>Stop managing it.<br><span class="g">Start training it.</span></h2>
+      <p class="lede">Tell me what's going on and what you want back. I read every one of these myself and reply with whether this is the right room for it — no packages pitched at you.</p>
+      <div class="cta2">
+        <a class="btn gold" href="#intake"><i class="fa-solid fa-pen-to-square"></i>Request a consult</a>
+        <a class="btn ol" href="mailto:brandone@boundlesstr.com"><i class="fa-solid fa-envelope"></i>Email instead</a>
+      </div>
+    </div>
+    <div class="form-card" id="intake">
+      <h3>Consult request</h3>
+      <p class="fnote">About a minute. Nothing here is a medical record — we go deep at the evaluation.</p>
+      <form method="post" action="">
+        <div class="frow">
+          <div class="fld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="First and last" required></div>
+          <div class="fld"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="(813) 000-0000"></div>
+        </div>
+        <div class="fld"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required></div>
+        <div class="frow">
+          <div class="fld"><label for="f-region">What hurts</label><select id="f-region" name="region"><option value="">Select a region</option><option>Knee</option><option>Shoulder</option><option>Hip / groin</option><option>Low back</option><option>Ankle / foot</option><option>Elbow / wrist</option><option>Neck</option><option>More than one</option><option>Nothing hurts — performance</option></select></div>
+          <div class="fld"><label for="f-date">Injury or surgery date</label><input id="f-date" name="date" type="text" placeholder="Approximate is fine"></div>
+        </div>
+        <div class="fld"><label for="f-goal">What do you want to get back to?</label><textarea id="f-goal" name="goal" placeholder="In your own words — the sport, the lift, the run, the thing you miss."></textarea></div>
+        <div class="fld"><label>Preferred time block</label><div class="pills">
+          <input type="radio" id="t1" name="block" value="morning"><label for="t1">Morning · 7–10a</label>
+          <input type="radio" id="t2" name="block" value="afternoon"><label for="t2">Afternoon · 12–3p</label>
+          <input type="radio" id="t3" name="block" value="evening"><label for="t3">Evening · 5–8p</label>
+        </div></div>
+        <div class="fld"><label>Currently in PT elsewhere?</label><div class="pills">
+          <input type="radio" id="p1" name="pt" value="yes"><label for="p1">Yes</label>
+          <input type="radio" id="p2" name="pt" value="no"><label for="p2">No</label>
+          <input type="radio" id="p3" name="pt" value="discharged"><label for="p3">Was, discharged</label>
+        </div></div>
+        <div class="fsub">
+          <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i>Send request</button>
+          <span class="fine">Replies within one business day</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <div class="strip-g">
+      <div class="inf"><i class="fa-solid fa-location-dot"></i><div><div class="l">Location</div><div class="v">Tampa, Florida<br><span style="color:var(--mut)">Exact address on booking</span></div></div></div>
+      <div class="inf"><i class="fa-solid fa-clock"></i><div><div class="l">Hours</div><div class="v">By appointment only<br><span style="color:var(--mut)">7–10a · 12–3p · 5–8p</span></div></div></div>
+      <div class="inf"><i class="fa-solid fa-envelope"></i><div><div class="l">Email</div><div class="v"><a href="mailto:brandone@boundlesstr.com">brandone@boundlesstr.com</a></div></div></div>
+      <div class="inf"><i class="fa-brands fa-instagram"></i><div><div class="l">Instagram</div><div class="v"><a href="https://instagram.com/dr.brandon.boundless" target="_blank" rel="noopener">@dr.brandon.boundless</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <img src="assets/logo-boundless.png" alt="Boundless Training &amp; Rehab">
+    <span>© 2026 Boundless Training &amp; Rehab · Dr. Brandon, DPT · Tampa, FL</span>
+    <div class="social">
+      <a href="https://instagram.com/dr.brandon.boundless" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="mailto:brandone@boundlesstr.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
