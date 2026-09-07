@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="boundless.css">
 <style>
 /* masthead */
-.mast{background:var(--ink);color:var(--bone);padding:104px 0 66px;overflow:hidden}
+.mast{background:var(--night);color:var(--bone);padding:104px 0 66px;overflow:hidden}
 .mast .fld{position:absolute;right:-30%;top:50%;width:min(760px,120vw);aspect-ratio:1;transform:translateY(-50%);pointer-events:none;opacity:.55}
 .mast .fld svg{width:100%;height:100%;overflow:visible}
 .mast-in{position:relative;z-index:3;max-width:900px}
@@ -22,7 +22,8 @@
 .crumb i{font-size:8px}
 
 /* timeline */
-.tl{padding:66px 0 74px;background:var(--bone)}
+.tl{padding:66px 0 74px;background:var(--snow)}
+.tl .eyebrow{color:var(--goldd)}
 .weeks{position:relative;border-left:2px solid var(--ink);margin-left:7px}
 .wk{position:relative;padding:0 0 40px 26px}
 .wk:last-child{padding-bottom:0}
@@ -35,16 +36,23 @@
 .wk li i{color:var(--goldd);font-size:11px;margin-top:4px;flex:none}
 
 /* battery */
-.bat{padding:66px 0 74px;background:var(--deep);color:var(--bone)}
+.bat{padding:66px 0 74px;background:var(--horizon);color:var(--bone)}
 .bat-g{display:grid;grid-template-columns:1fr;border-top:2px solid var(--lineD)}
 .bt{padding:26px 0 30px;border-bottom:1px solid var(--lineD2)}
+.bt{transition:background .2s,border-color .2s,transform .2s,color .2s}
+.bt:hover{background:var(--mist);border-color:var(--gold);box-shadow:inset 0 0 0 2px var(--gold);transform:scale(1.02);position:relative;z-index:2;color:var(--ink)}
+.bt:hover h3{color:var(--ink)}
+.bt:hover p{color:var(--txt)}
+.bt:hover .ic{color:var(--ink)}
+.bt:hover .std{color:var(--ink)}
 .bt .ic{color:var(--gold);font-size:19px}
 .bt h3{font-size:20px;margin:16px 0 10px}
 .bt p{font-size:14px;line-height:1.7;color:var(--txtd)}
 .bt .std{margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}
 
 /* session */
-.ses{padding:66px 0 74px;background:var(--bone)}
+.ses{padding:66px 0 74px;background:var(--snow)}
+.ses .eyebrow{color:var(--goldd)}
 .ses-g{display:grid;grid-template-columns:1fr;border-top:2px solid var(--ink)}
 .blk{padding:26px 0 30px;border-bottom:2px solid var(--ink)}
 .blk .mins{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:6px 11px}
@@ -52,7 +60,7 @@
 .blk p{font-size:14.5px;line-height:1.7;color:var(--txt)}
 
 /* case */
-.case{padding:66px 0 74px;background:var(--ink);color:var(--bone);overflow:hidden}
+.case{padding:66px 0 74px;background:var(--horizon);color:var(--bone);overflow:hidden}
 .case .big{font-size:clamp(28px,8.4vw,60px);margin-top:14px}
 .case .quote{font-size:15.5px;line-height:1.8;color:var(--txtd);border-left:2px solid var(--gold);padding-left:18px;margin-top:26px}
 .steps{display:grid;grid-template-columns:1fr;margin-top:40px;border-top:2px solid var(--gold)}
@@ -68,6 +76,7 @@
 
 /* discharge */
 .dis{padding:66px 0 74px;background:var(--gold);color:var(--ink)}
+.dis .eyebrow{color:var(--ink)}
 .std2{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:20px 0;border-top:2px solid var(--lineL)}
 .std2 i{font-size:16px;margin-top:3px}
 .std2 h3{font-size:19px;margin-bottom:8px}
@@ -75,13 +84,14 @@
 .dis .close{margin-top:36px;font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(21px,6.4vw,34px);text-transform:uppercase;letter-spacing:-.035em;line-height:1.08}
 
 /* cta (light) */
-.cta{background:var(--sand);color:var(--ink);padding:70px 0 78px;overflow:hidden}
+.cta{background:var(--horizon);color:var(--bone);padding:70px 0 78px;overflow:hidden}
+.cta .eyebrow{color:var(--snow)}
 .cta .bfield{opacity:.5;width:min(900px,150vw)}
-.cta .ln{stroke:var(--ink);opacity:.45}
+.cta .ln{opacity:.45}
 .cta-in{position:relative;z-index:3}
 .cta h2{font-size:clamp(30px,9vw,68px);margin-top:14px}
-.cta h2 .g{color:var(--goldd)}
-.cta p{margin-top:20px;max-width:470px;font-size:16px;line-height:1.7;color:var(--txt)}
+.cta h2 .g{color:var(--gold)}
+.cta p{margin-top:20px;max-width:470px;font-size:16px;line-height:1.7;color:var(--txtd)}
 .cta .row{margin-top:28px;display:flex;flex-direction:column;gap:10px;max-width:330px}
 
 @media(min-width:700px){
@@ -114,10 +124,8 @@
   .weeks{margin-left:8px}
   .wk{padding:0 0 52px 40px}
   .bat-g{grid-template-columns:repeat(3,1fr)}
-  .bt{transition:background .35s}
   .bt:nth-child(2n+1){border-left:1px solid var(--lineD2)}
   .bt:nth-child(3n+1){border-left:none}
-  .bt:hover{background:rgba(252,189,0,.07)}
   .steps{grid-template-columns:repeat(4,1fr)}
   .stp{padding:28px 22px 30px;border-bottom:none;border-left:1px solid var(--lineD2)}
   .stp:nth-child(2n+1){border-left:1px solid var(--lineD2)}
@@ -279,7 +287,7 @@
     <p>One evaluation tells you where you actually stand. Tampa, by appointment — mornings, afternoons, and evenings.</p>
     <div class="row">
       <a class="btn gold" href="index.html#intake"><i class="fa-solid fa-pen-to-square"></i>Request a consult</a>
-      <a class="btn o" href="index.html"><i class="fa-solid fa-house"></i>Back to the main page</a>
+      <a class="btn ol" href="index.html"><i class="fa-solid fa-house"></i>Back to the main page</a>
     </div>
   </div>
 </section>
