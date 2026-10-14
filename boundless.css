@@ -15,9 +15,9 @@ h1,h2,h3,h4{font-family:'Montserrat',sans-serif;font-weight:800;text-transform:u
 p{margin:0;text-wrap:pretty}
 section{position:relative}
 .wrap{max-width:1400px;margin:0 auto;padding:0 var(--pad)}
-.h{color:transparent;-webkit-text-stroke:1.4px var(--ink)}
-.dark .h,.band .h{-webkit-text-stroke-color:var(--bone)}
-.band .h{-webkit-text-stroke-color:var(--ink)}
+.h{color:var(--ink);-webkit-text-stroke:0}
+.dark .h{color:var(--bone)}
+.band .h{color:var(--ink)}
 .g{color:var(--gold)}
 
 
