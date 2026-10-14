@@ -3,58 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Boundless Training &amp; Rehab — Doctor-led rehab and performance, Tampa</title>
-<meta name="description" content="Doctor-led rehabilitation and performance training in Tampa, FL. Dr. Brandon, DPT. Cleared isn't ready — we train the gap.">
+<title>Boundless Training &amp; Rehab | Doctor-led rehab and performance, Tampa</title>
+<meta name="description" content="Doctor-led rehabilitation and performance training in Tampa, FL. Dr. Brandon Rosa, DPT. Don't hold back doing what you love.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="boundless.css">
 <style>
 /* ── hero ── */
 .hero{background:var(--night);color:var(--bone);overflow:hidden;display:flex;align-items:center;justify-content:center;padding:110px 0 84px;min-height:100svh}
-.hero .vig{position:absolute;inset:0;background:radial-gradient(ellipse 66% 60% at 50% 48%,rgba(252,189,0,.12),transparent 64%);pointer-events:none}
+.hero .vig{position:absolute;inset:0;background:radial-gradient(ellipse 66% 60% at 50% 48%,rgba(244,184,64,.12),transparent 64%);pointer-events:none}
 .stage{position:relative;z-index:6;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 var(--pad)}
-.mark{width:min(430px,82vw);opacity:0;animation:reveal 1.4s .2s cubic-bezier(.16,1,.3,1) forwards}
-@keyframes reveal{0%{opacity:0;transform:scale(.74)}55%{opacity:1}100%{opacity:1;transform:scale(1)}}
-.tag{margin-top:26px;font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(26px,8.4vw,50px);line-height:.98;letter-spacing:-.04em;text-transform:uppercase;opacity:0;animation:up .9s 1s forwards}
+.mark{width:min(450px,82vw);opacity:0;animation:reveal 1.4s .2s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes reveal{0%{opacity:0;transform:scale(.74)}55%{opacity:1}100%{opacity:1;transform:none}}
+.tag{margin-top:26px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,6.4vw,42px);line-height:1.1;letter-spacing:.02em;text-transform:uppercase;opacity:0;animation:up .9s 1s forwards}
+.tag .h{color:var(--bone);-webkit-text-stroke:0}
 .sublede{margin:18px auto 0;max-width:540px;font-size:15px;line-height:1.7;color:var(--txtd);opacity:0;animation:up .9s 1.2s forwards}
 .hero-cta{margin-top:28px;display:flex;flex-direction:column;gap:10px;width:100%;max-width:320px;opacity:0;animation:up .9s 1.4s forwards}
 @keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 .kicker{position:absolute;top:82px;left:var(--pad);right:var(--pad);z-index:7;color:var(--gold);opacity:0;animation:up .8s .8s forwards}
-.kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--fire);animation:beat 1.5s ease-in-out infinite;flex:none}
-@keyframes beat{0%,100%{box-shadow:0 0 0 0 var(--fireGlow)}50%{box-shadow:0 0 0 10px var(--fireGlow0)}}
+.kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:beat 1.5s ease-in-out infinite;flex:none}
+@keyframes beat{0%,100%{box-shadow:0 0 0 0 var(--glow)}50%{box-shadow:0 0 0 10px var(--glow0)}}
 .hero-foot{display:none}
 
 /* ── the gap (light) ── */
 .gap{background:var(--snow);color:var(--ink);padding:66px 0 74px;overflow:hidden}
 .gap-in{position:relative;z-index:2}
-.gap h2{font-size:clamp(30px,9vw,80px);margin-top:14px;line-height:.92;color:var(--night)}
+.gap h2{font-size:clamp(26px,6.8vw,60px);margin-top:14px;line-height:1.1;color:var(--night)}
 .gap .g{color:var(--dawn)}
 .gap .eyebrow{color:var(--goldd)}
 .stages{margin-top:44px;display:flex;flex-direction:column;gap:0}
 .stg{position:relative;border-top:2px solid var(--lineL);padding:18px 0 22px}
-.stg .lb{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase;letter-spacing:.02em;margin-top:0;color:var(--horizon)}
+.stg .lb{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:.02em;margin-top:0;color:var(--horizon)}
 .stg.in .lb{color:var(--dawn)}
-.stg .nt{font-size:14px;line-height:1.6;color:var(--txt);margin-top:6px;max-width:340px}
-.stg.in{border-top-color:var(--gold);background:linear-gradient(180deg,rgba(252,189,0,.16),rgba(252,189,0,0) 72%)}
-.stg .tag{position:absolute;top:18px;right:0;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--goldd);display:flex;align-items:center;gap:7px;line-height:1}
-.stg.in .lb,.stg.in .nt{padding-right:104px}
+.stg .nt{font-size:15px;line-height:1.6;color:var(--txt);margin-top:6px;max-width:340px}
+.stg.in{border-top-color:var(--gold);background:linear-gradient(180deg,rgba(244,184,64,.16),rgba(244,184,64,0) 72%)}
+.stg .tag{margin:0!important;animation:none;opacity:1;position:absolute;top:-28px;left:0;right:auto;font-family:'Montserrat',sans-serif;font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--goldd);display:flex;align-items:center;gap:7px;line-height:1}
+.stg.in .lb,.stg.in .nt{padding-right:0}
 .gap-cap{margin-top:34px;border-left:2px solid var(--gold);padding:4px 0 4px 18px}
-.gap-cap .t{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase;letter-spacing:-.02em;color:var(--dawn)}
-.gap-cap .s{font-size:14px;line-height:1.6;color:var(--txt);margin-top:7px;max-width:420px}
+.gap-cap .t{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:.02em;color:var(--dawn)}
+.gap-cap .s{font-size:15px;line-height:1.6;color:var(--txt);margin-top:7px;max-width:420px}
 
 /* ── services ── */
-.svc{padding:66px 0 74px;background:var(--horizon)}
+.svc{padding:66px 0 74px;background:var(--night)}
 .svc .eyebrow{color:var(--snow)}
-.svc h2{color:var(--dawn)}
+.svc h2{color:var(--gold)}
 .grid3 .cell{background:var(--snow);border-color:var(--horizon);transition:background .2s,border-color .2s,transform .2s}
 .grid3 .cell:hover{background:var(--mist);border-color:var(--gold);box-shadow:inset 0 0 0 2px var(--gold);transform:scale(1.02);position:relative;z-index:2}
 .grid3{display:grid;grid-template-columns:1fr;border-top:2px solid var(--horizon)}
 .cell{padding:30px 0 34px;border-bottom:2px solid var(--horizon);display:flex;flex-direction:column}
 .ic{width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:var(--horizon);color:var(--gold);font-size:19px;flex:none}
-.cell h3{font-size:23px;margin:20px 0 10px;line-height:1;font-weight:700}
-.cell p{font-size:14.5px;line-height:1.65;color:var(--txt);flex:1}
+.cell h3{font-size:19px;margin:20px 0 10px;line-height:1;font-weight:700}
+.cell p{font-size:15px;line-height:1.65;color:var(--txt);flex:1}
 .cell.ask{background:var(--mist);color:var(--night);padding:30px 24px 34px}
 .cell.ask .ic{background:var(--horizon);color:var(--gold)}
 .cell.ask h3{color:var(--night)}
@@ -66,17 +67,17 @@
 .phases{display:grid;grid-template-columns:1fr;gap:0}
 .ph{padding:26px 0 30px;border-top:2px solid var(--gold)}
 .ph:first-child{border-top:none;padding-top:0}
-.ph .tm{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
-.ph h3{font-size:24px;margin:12px 0 10px}
-.ph p{font-size:14.5px;line-height:1.7;color:var(--snow)}
+.ph .tm{font-family:'Montserrat',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.ph h3{font-size:20px;margin:12px 0 10px}
+.ph p{font-size:15px;line-height:1.7;color:var(--snow)}
 .method .after{margin-top:36px}
 
 /* ── stats ── */
 .stats{background:var(--gold);color:var(--night);padding:52px 0 56px}
 .stats-g{display:grid;grid-template-columns:1fr 1fr;gap:30px 22px}
-.stat .v{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(42px,13vw,72px);line-height:.88;letter-spacing:-.05em}
-.stat .v sup{font-size:.36em;vertical-align:super;margin-left:2px}
-.stat .k{margin-top:10px;font-size:13px;line-height:1.5;color:var(--night)}
+.stat .v{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(34px,10vw,58px);line-height:1;letter-spacing:0}
+.stat .v sup{font-size:max(15px,.36em);vertical-align:super;margin-left:2px}
+.stat .k{margin-top:10px;font-size:15px;line-height:1.5;color:var(--night)}
 
 /* ── doctor ── */
 .doc{padding:66px 0 74px;background:var(--snow)}
@@ -85,40 +86,40 @@
 .doc .g{color:var(--dawn)}
 .portrait{position:relative;border:2px solid var(--ink);aspect-ratio:4/5;background:var(--sand);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--mut);text-align:center;padding:24px}
 .portrait i{font-size:34px}
-.portrait span{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;line-height:1.7}
-.portrait .badge{position:absolute;right:-2px;bottom:-2px;background:var(--gold);color:var(--ink);padding:11px 15px;font-family:'Archivo',sans-serif;font-weight:900;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+.portrait span{font-family:'Montserrat',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;line-height:1.7}
+.portrait .badge{position:absolute;right:-2px;bottom:-2px;background:var(--gold);color:var(--ink);padding:11px 15px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase}
 .doc .body{margin-top:34px}
-.doc .body h2{font-size:clamp(28px,8vw,52px);margin-bottom:20px}
+.doc .body h2{font-size:clamp(24px,6.4vw,40px);margin-bottom:20px}
 .doc .body p{font-size:16px;line-height:1.75;color:var(--txt)}
 .doc .body p+p{margin-top:16px}
 .creds{margin-top:30px;display:grid;gap:12px}
-.cred{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;padding-top:13px;border-top:1px solid var(--chalk)}
-.cred i{color:var(--dawn);font-size:14px;margin-top:2px;flex:none}
+.cred{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5;padding-top:13px;border-top:1px solid var(--chalk)}
+.cred i{color:var(--dawn);font-size:15px;margin-top:2px;flex:none}
 
 /* ── youth ── */
-.youth{padding:66px 0 74px;background:var(--horizon)}
+.youth{padding:66px 0 74px;background:var(--night)}
 .youth .eyebrow{color:var(--snow)}
-.youth h2{color:var(--dawn)}
+.youth h2{color:var(--gold)}
 .y-g{display:grid;grid-template-columns:1fr;border-top:2px solid var(--night)}
 .yc{padding:30px 0 34px;border-bottom:2px solid var(--night);background:var(--snow)}
-.yc .who{display:inline-flex;align-items:center;gap:9px;background:var(--night);color:var(--gold);padding:8px 13px;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.16em;text-transform:uppercase}
-.yc h3{font-size:clamp(23px,6.6vw,32px);margin:20px 0 14px;color:var(--night)}
+.yc .who{display:inline-flex;align-items:center;gap:9px;background:var(--night);color:var(--gold);padding:8px 13px;font-family:'Montserrat',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase}
+.yc h3{font-size:clamp(20px,5.4vw,26px);margin:20px 0 14px;color:var(--night)}
 .yc p{font-size:15px;line-height:1.7;color:var(--txt)}
 .pts{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:11px}
-.pts li{display:flex;gap:11px;font-size:14px;line-height:1.55}
-.pts i{color:var(--goldd);font-size:11px;margin-top:5px;flex:none}
+.pts li{display:flex;gap:11px;font-size:15px;line-height:1.55}
+.pts i{color:var(--goldd);font-size:15px;margin-top:5px;flex:none}
 
 /* ── fit ── */
 .yc .pts i{color:var(--dawn)}
 .fit{padding:66px 0 74px;background:var(--night);color:var(--bone)}
 .fit-g{display:grid;grid-template-columns:1fr;border-top:2px solid var(--mist)}
 .col{padding:28px 0 32px;border-bottom:1px solid var(--lineD2)}
-.col h3{font-size:23px;margin-bottom:20px;display:flex;align-items:center;gap:11px}
+.col h3{font-size:20px;margin-bottom:20px;display:flex;align-items:center;gap:11px}
 .col h3 i{font-size:17px}
-.col.yes h3 i{color:var(--gold)}.col.no h3 i{color:var(--fire)}
+.col.yes h3 i{color:var(--gold)}.col.no h3 i{color:var(--mutd)}
 .col ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.col li{display:flex;gap:12px;font-size:14.5px;line-height:1.55;color:var(--txtd)}
-.col li i{font-size:11px;margin-top:5px;flex:none}
+.col li{display:flex;gap:12px;font-size:15px;line-height:1.55;color:var(--txtd)}
+.col li i{font-size:15px;margin-top:5px;flex:none}
 .col.yes li i{color:var(--gold)}.col.no li i{color:#6B6660}
 
 /* ── faq (details) ── */
@@ -127,7 +128,7 @@
 .faq h2{color:var(--night)}
 .qa{border-top:2px solid var(--horizon)}
 .qa:last-of-type{border-bottom:2px solid var(--horizon)}
-.qa summary{list-style:none;cursor:pointer;display:flex;gap:16px;align-items:center;justify-content:space-between;padding:22px 0;font-family:'Archivo',sans-serif;font-weight:900;font-size:17px;text-transform:uppercase;letter-spacing:-.02em}
+.qa summary{list-style:none;cursor:pointer;display:flex;gap:16px;align-items:center;justify-content:space-between;padding:22px 0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.02em}
 .qa summary::-webkit-details-marker{display:none}
 .qa summary span{color:var(--night)}
 .qa summary i{color:var(--dawn);font-size:15px;transition:transform .3s;flex:none}
@@ -135,33 +136,33 @@
 .qa p{padding:0 0 24px;font-size:15px;line-height:1.75;color:var(--txt);max-width:760px}
 
 /* ── book + intake ── */
-.book{background:var(--horizon);color:var(--bone);padding:70px 0 78px;overflow:hidden}
+.book{background:var(--night);color:var(--bone);padding:70px 0 78px;overflow:hidden}
 .book .bfield{opacity:.4;width:min(900px,150vw)}
 .book-in{position:relative;z-index:2}
-.book h2{font-size:clamp(30px,9vw,70px);margin-top:14px;color:var(--mist)}
+.book h2{font-size:clamp(26px,7vw,52px);margin-top:14px;color:var(--bone)}
 .book .g{color:var(--gold)}
 .book .eyebrow{color:var(--snow)}
 .book .lede{margin-top:20px;font-size:16px;line-height:1.7;color:var(--snow);max-width:460px}
 .book .cta2{margin-top:26px;display:flex;flex-direction:column;gap:10px;max-width:320px}
 .form-card{background:var(--bone);color:var(--ink);padding:26px 22px 30px;margin-top:44px}
-.form-card h3{font-size:24px}
-.form-card .fnote{font-size:13.5px;line-height:1.65;color:var(--txt);margin:10px 0 24px}
+.form-card h3{font-size:20px}
+.form-card .fnote{font-size:15px;line-height:1.65;color:var(--txt);margin:10px 0 24px}
 .frow{display:grid;gap:0}
 .fld{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
-.fld label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.fld input,.fld select,.fld textarea{font-family:'Sora',sans-serif;font-size:16px;color:var(--ink);background:transparent;border:none;border-bottom:2px solid var(--chalk);padding:10px 2px;outline:none;transition:border-color .25s;border-radius:0;-webkit-appearance:none;appearance:none}
+.fld label{font-family:'Montserrat',sans-serif;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.fld input,.fld select,.fld textarea{font-family:'Montserrat',sans-serif;font-size:16px;color:var(--ink);background:transparent;border:none;border-bottom:2px solid var(--chalk);padding:10px 2px;outline:none;transition:border-color .25s;border-radius:0;-webkit-appearance:none;appearance:none}
 .fld textarea{resize:vertical;min-height:84px;line-height:1.6}
 .fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--gold)}
-.fld input:user-invalid{border-color:var(--fire)}
+.fld input:user-invalid{border-color:var(--night)}
 .fld input::placeholder,.fld textarea::placeholder{color:var(--txtd)}
 .pills{display:flex;gap:8px;flex-wrap:wrap}
 .pills input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-.pills label{display:inline-flex;align-items:center;min-height:44px;padding:10px 15px;box-shadow:inset 0 0 0 2px var(--chalk);cursor:pointer;font-family:'Archivo',sans-serif;font-weight:900;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);transition:.22s}
+.pills label{display:inline-flex;align-items:center;min-height:44px;padding:10px 15px;box-shadow:inset 0 0 0 2px var(--chalk);cursor:pointer;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);transition:.22s}
 .pills input:focus-visible+label{box-shadow:inset 0 0 0 2px var(--ink)}
 .pills label:hover{box-shadow:inset 0 0 0 2px var(--ink);color:var(--ink)}
 .pills input:checked+label{background:var(--ink);color:var(--gold);box-shadow:inset 0 0 0 2px var(--ink)}
 .fsub{display:flex;flex-direction:column;gap:14px;margin-top:24px;padding-top:20px;border-top:2px solid var(--ink)}
-.fsub .fine{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);line-height:1.7}
+.fsub .fine{font-family:'Montserrat',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);line-height:1.7}
 
 @media(min-width:700px){
   .hero-cta{flex-direction:row;max-width:none;justify-content:center}
@@ -184,7 +185,7 @@
   .fit-g{grid-template-columns:1fr 1fr;border:2px solid var(--mist)}
   .col{padding:32px 28px 36px;border-bottom:none}
   .col+.col{border-left:2px solid var(--mist)}
-  .qa summary{font-size:21px;padding:26px 0}
+  .qa summary{font-size:17px;padding:26px 0}
   .frow{grid-template-columns:1fr 1fr;gap:0 18px}
   .form-card{padding:34px 32px 38px}
   .fsub{flex-direction:row;align-items:center;gap:18px}
@@ -195,7 +196,7 @@
   .hero{padding:130px 0 96px}
   .tag{margin-top:34px}
   .kicker{top:104px;display:flex;gap:12px;align-items:center}
-  .hero-foot{display:flex;position:absolute;bottom:28px;left:var(--pad);right:var(--pad);justify-content:space-between;align-items:flex-end;color:var(--mutd);z-index:7;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:0;animation:up .8s 1.6s forwards}
+  .hero-foot{display:flex;position:absolute;bottom:28px;left:var(--pad);right:var(--pad);justify-content:space-between;align-items:flex-end;color:var(--mutd);z-index:7;font-family:'Montserrat',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;opacity:0;animation:up .8s 1.6s forwards}
   .scrollcue{display:flex;gap:10px;align-items:center}
   .scrollcue i{display:block;width:1px;height:28px;background:var(--gold);animation:cue 1.9s ease-in-out infinite;transform-origin:top}
   @keyframes cue{0%,100%{transform:scaleY(.25);opacity:.3}50%{transform:scaleY(1);opacity:1}}
@@ -203,7 +204,7 @@
   .stages{margin-top:70px;flex-direction:row;gap:0}
   .stg{flex:1;padding:20px 22px 26px 0}
   .stg.in{padding-left:18px;padding-right:18px}
-  .stg .tag{top:20px;right:18px}
+  .stg .tag{margin:0!important;top:-34px;left:18px;right:auto}
   .stg.in .lb,.stg.in .nt{padding-right:0}
   .stg .nt{max-width:none}
   .zone span{top:-30px;right:auto;left:12px}
@@ -215,7 +216,7 @@
   .stg::before{left:0;top:-5px}
   .stg.hot::after{content:"";position:absolute;left:0;right:-24px;top:-1.5px;height:3px;background:var(--gold);opacity:.4}
   .gap-cap{margin-top:44px;max-width:520px}
-  .gap-cap .t{font-size:24px}
+  .gap-cap .t{font-size:20px}
   .svc,.method,.doc,.youth,.fit,.faq{padding:104px 0 116px}
   .book{padding:112px 0 120px}
   .stats{padding:78px 0 84px}
@@ -234,16 +235,154 @@
   .book-in{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start}
   .form-card{margin-top:0}
 }
+
+/* ── mission ── */
+.mis{padding:66px 0 74px;background:var(--night);color:var(--bone)}
+.mis .shead h2{color:var(--bone)}
+.mis-g{display:grid;gap:26px}
+.mis-lead{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(18px,4.6vw,26px);line-height:1.35;color:var(--gold2);max-width:22ch}
+.mis-body p{font-size:16px;line-height:1.8;color:var(--bone);max-width:62ch}
+.mis-body p+p{margin-top:18px}
+
+/* ── service menu ── */
+.mn{padding:66px 0 74px;background:var(--night);color:var(--bone)}
+.mn-bar{background:var(--gold);color:var(--night);font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:12px 16px;margin:68px 0 22px}
+.mn-bar:first-of-type{margin-top:0}
+.mn-two{display:grid;gap:18px}
+.mc{background:#161616;border:2px solid var(--gold2);padding:26px 22px 28px;display:flex;flex-direction:column}
+.mc-ic{width:46px;height:46px;display:flex;align-items:center;justify-content:center;border:2px solid var(--gold);color:var(--gold);font-size:19px;margin-bottom:18px;flex:none}
+.mc h3{font-size:20px;line-height:1.15;color:var(--bone)}
+.mc h3 .g{display:block;color:var(--gold)}
+.mc-meta{display:flex;align-items:baseline;gap:14px;margin:12px 0 14px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2)}
+.mc-meta b{font-size:22px;letter-spacing:.02em;color:var(--bone);font-weight:800}
+.mc p{font-size:15px;line-height:1.7;color:var(--bone)}
+.mc-sub{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px!important;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)!important;margin-top:20px}
+.mc-req{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px!important;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)!important;margin:10px 0 18px}
+.chips{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{border:1.5px solid var(--lineD);padding:7px 12px;font-size:15px;font-weight:600;color:var(--bone)}
+.tick{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.tick li{display:flex;gap:10px;font-size:15px;line-height:1.45;font-weight:600;color:var(--bone)}
+.tick i{color:var(--gold);margin-top:2px;flex:none}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.plan{background:var(--night);border:2px solid var(--gold);padding:16px 14px}
+.pl-t{font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)}
+.pl-h{font-family:'Montserrat',sans-serif;font-weight:800;font-size:20px;line-height:1.1;text-transform:uppercase;color:var(--bone);margin:6px 0 8px}
+.pl-n{font-size:15px;line-height:1.45;color:var(--bone)}
+.inc{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:0}
+.inc li{display:flex;gap:14px;align-items:flex-start;font-size:15px;line-height:1.5;font-weight:600;color:var(--bone);padding:14px 0;border-top:1px solid var(--lineD2)}
+.inc li:first-child{border-top:none;padding-top:0}
+.inc i{color:var(--gold);font-size:17px;width:22px;text-align:center;margin-top:1px;flex:none}
+.plans+.inc li:first-child{border-top:1px solid var(--lineD2);padding-top:14px}
+.mn-cta{margin-top:34px;background:var(--gold);color:var(--night);padding:26px 22px;display:grid;gap:18px}
+.mn-cta .a{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(20px,5.4vw,28px);text-transform:uppercase;line-height:1.1}
+.mn-cta .b{margin-top:8px;font-size:15px;line-height:1.5;font-weight:600}
+.mn-cta-b{display:flex;flex-wrap:wrap;gap:10px}
+.mn-cta .btn.o{color:var(--night);box-shadow:inset 0 0 0 2px var(--night)}
+.mn-cta .btn.o:hover{background:var(--night);color:var(--gold)}
+.mn-cta .btn:hover{background:var(--night);color:var(--gold)}
+/* round 6 tweaks: titles beside icons, card colors, doctor headline, fit cards */
+.cell{display:grid;grid-template-columns:48px 1fr;column-gap:16px;align-content:start;align-items:center}
+.cell h3{margin:0}
+.cell p,.cell .btn{grid-column:1/-1}
+.cell p{margin-top:18px}
+.cell.ask .btn{margin-top:22px;justify-self:start}
+.mc{display:grid;grid-template-columns:46px 1fr;column-gap:16px;align-content:start;align-items:center}
+.mc-ic{margin-bottom:0}
+.mc h3{margin:0}
+.mc>*:not(.mc-ic):not(h3){grid-column:1/-1}
+.mc>.mc-meta{margin-top:18px}
+.doc h2 .h{color:var(--night);-webkit-text-stroke:0}
+.col{background:#161616;padding:28px 24px 32px}
+/* round 7: mission statement, method timeline, stats heading */
+.mis{position:relative;overflow:hidden;padding:84px 0 96px}
+.mis::before{content:"";position:absolute;right:-14%;top:50%;width:min(940px,130vw);aspect-ratio:504.89/345.38;transform:translateY(-50%);background:url(assets/boundless-tr_logo-wings.svg) center/contain no-repeat;opacity:.06;pointer-events:none}
+.mis .wrap{position:relative}
+.mis-h{font-size:clamp(38px,10.6vw,116px);line-height:.98;margin:18px 0 0;color:var(--bone);text-wrap:balance}
+.mis-h .g{color:var(--gold)}
+.mis-lead{margin:26px 0 0;max-width:32ch;font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(20px,3.2vw,32px);line-height:1.3;color:var(--gold2)}
+.mis-kick{margin:64px 0 0;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(18px,2.2vw,24px);text-transform:uppercase;letter-spacing:.04em;color:var(--bone)}
+.mis-cells{display:grid;grid-template-columns:1fr 1fr;margin-top:22px;border-top:2px solid var(--gold)}
+.mis-c{padding:26px 18px 28px 0;border-bottom:1px solid var(--lineD2)}
+.mis-c i{display:block;color:var(--gold);font-size:28px}
+.mis-c b{display:block;margin-top:14px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(18px,2.4vw,24px);text-transform:uppercase;letter-spacing:.02em;line-height:1.1;color:var(--bone)}
+.mis-c span{display:block;margin-top:10px;font-size:15px;line-height:1.55;color:var(--txtd)}
+.mis-team{margin-top:64px}
+.mis-team p{max-width:30ch;font-weight:600;font-size:clamp(22px,3.4vw,42px);line-height:1.25;color:var(--bone)}
+.mis-team .g{color:var(--gold)}
+.mis-close{margin-top:40px;background:var(--gold);color:var(--night);padding:26px 28px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(18px,2.6vw,28px);text-transform:uppercase;letter-spacing:.02em;line-height:1.2}
+@media(min-width:1040px){
+  .mis{padding:128px 0 140px}
+  .mis-cells{grid-template-columns:repeat(4,1fr)}
+  .mis-c{border-bottom:none;padding:30px 24px 0 24px;border-left:1px solid var(--lineD2)}
+  .mis-c:first-child{border-left:none;padding-left:0}
+}
+.method .phases{display:block;position:relative;padding-left:40px}
+.method .phases::before{content:"";position:absolute;left:8px;top:11px;height:var(--rh,0px);width:2px;background:rgba(244,184,64,.22)}
+.method .phases::after{content:"";position:absolute;left:8px;top:11px;width:2px;height:calc(var(--rh,0px)*var(--p,0));background:var(--gold)}
+.method .ph{position:relative;border:0!important;padding:0 0 46px!important}
+.method .ph:last-child{padding-bottom:0!important}
+.method .ph::before{content:"";position:absolute;left:-40px;top:2px;width:18px;height:18px;box-sizing:border-box;border-radius:50%;background:var(--night);border:2px solid var(--gold);transition:background .4s,box-shadow .4s}
+.method .ph.on::before{background:var(--gold);box-shadow:0 0 0 6px rgba(244,184,64,.18)}
+.method .ph h3{font-size:clamp(22px,3vw,32px)}
+@media(min-width:1040px){
+  .method .phases{padding-left:0}
+  .method .phases::before,.method .phases::after{left:50%;margin-left:-1px;top:13px}
+  .method .ph{width:calc(50% - 56px);padding-bottom:56px!important}
+  .method .ph:last-child{padding-bottom:0!important}
+  .method .ph:nth-child(odd){margin-right:auto;text-align:right}
+  .method .ph:nth-child(even){margin-left:auto}
+  .method .ph::before{top:4px}
+  .method .ph:nth-child(odd)::before{left:auto;right:-65px}
+  .method .ph:nth-child(even)::before{left:-65px}
+}
+.stats-h{margin-bottom:34px}
+.stats .eyebrow{color:var(--night)}
+.stats-h h2{margin-top:10px;font-size:clamp(24px,4.4vw,40px);color:var(--night)}
+.stat .k b{display:block;margin-bottom:4px;font-size:15px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+/* round 8 tweaks */
+.mis::before{right:-24%;width:min(1500px,190vw);opacity:.14}
+.mis-h{font-size:clamp(34px,7.4vw,86px);line-height:1;text-align:left;text-wrap:initial}.mis-h .ln{display:block}.mis-h .ln.c{text-align:center}
+.mis-lead{color:var(--bone);text-align:center;margin-top:clamp(40px,5vw,72px);margin-left:auto;margin-right:auto;font-weight:300;font-size:clamp(18px,2.4vw,26px);max-width:44ch}
+.mis-kick{font-weight:300;font-size:clamp(16px,1.7vw,20px);margin-top:clamp(40px,5vw,72px)}
+.mis-c{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:center;align-content:start}
+.mis-c i{font-size:26px;width:32px;text-align:center}
+.mis-c b{margin-top:0;font-weight:500;font-size:clamp(16px,1.6vw,20px)}
+.mis-c span{grid-column:2;font-weight:400}
+.mis-team p{font-weight:300;font-size:clamp(18px,2.4vw,26px);max-width:36ch}
+.mis-team .g{font-weight:500}
+.mis-close{text-align:center;font-size:clamp(16px,1.8vw,22px)}
+.cell.ask .btn.gold{background:var(--night);color:var(--gold)}
+.cell.ask .btn.gold:hover{background:var(--bone);color:var(--night)}
+.mc{border-color:rgba(248,198,98,.32);transition:border-color .35s,background-color .35s,box-shadow .35s}
+.mc:hover{border-color:var(--gold2);background:#000;box-shadow:inset 0 0 44px rgba(248,198,98,.42),inset 0 0 14px rgba(248,198,98,.3)}
+/* black sections stacked together get a gold rule between them */
+.svc,.mn,.method,.fit{border-top:2px solid var(--gold)}
+/* softened corners: 6px, not pills */
+.frow>*,.fld{min-width:0}
+.fld input,.fld select,.fld textarea{width:100%;min-width:0}
+.mc,.plan,.chips li,.mn-bar,.mn-cta,.portrait,.fld input,.fld select,.fld textarea,.pills label{border-radius:6px}
+.mc-ic{border-radius:6px}
+@media(min-width:700px){
+  .mn-two{grid-template-columns:1fr 1fr}
+  .mc{padding:30px 28px 34px}
+  .mis-g{grid-template-columns:.8fr 1fr;gap:56px;align-items:start}
+  .mn-cta{grid-template-columns:1fr auto;align-items:center;padding:30px 32px}
+}
+@media(min-width:1040px){
+  .mis,.mn{padding:104px 0 116px}
+  .ph:first-child{padding-top:26px;border-top:2px solid var(--gold)}
+  .book h2{font-size:clamp(28px,3.4vw,44px)}
+}
 </style>
 </head>
 <body>
-<div class="prog"></div>
 <input class="navchk" type="checkbox" id="navToggle" aria-label="Open menu">
 <header class="nav">
-  <a class="brand" href="#top"><img src="assets/logo-boundless.png" alt="Boundless Training &amp; Rehab"></a>
+  <a class="brand lock" href="#top" aria-label="Boundless Training &amp; Rehab"><img src="assets/boundless-tr_logo-horizontal.svg" alt="Boundless Training and Rehab"></a>
   <nav class="links">
     <a href="#gap">The Gap</a>
     <a href="#services">Services</a>
+    <a href="#menu">Menu</a>
     <a href="method.html">Method</a>
     <a href="#doctor">Dr. Brandon</a>
     <a href="#youth">Youth</a>
@@ -289,24 +428,23 @@
       <path class="ln march2" d="M -40 1020 Q 600 60 1240 1020" stroke-width="1.5" opacity=".45" style="animation-delay:1.6s"/>
       <path class="ln march2" d="M 60 1200 Q 600 240 1140 1200" stroke-width="1.5" opacity=".3" style="animation-delay:3.2s"/>
       <circle r="6" fill="var(--gold)"><animateMotion dur="14s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
-      <circle r="4.5" fill="#FF3B00"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+      <circle r="4.5" fill="#F8C662"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
       <circle r="4" fill="var(--gold)" opacity=".8"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
       <circle r="3" fill="var(--gold)" opacity=".55"><animateMotion dur="11s" begin="-4s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
     </svg>
   </div>
   <div class="kicker eyebrow"><span class="dot"></span><span>Now accepting new patients · Tampa, FL</span></div>
   <div class="stage">
-    <div class="mark"><img src="assets/logo-full.png" alt="Boundless Training and Rehab"></div>
-    <h1 class="tag"><span class="h">Bodies weren't</span> <span class="g">built to sit still.</span></h1>
-    <p class="sublede">Doctor-led rehabilitation and performance training for people who intend to get all the way back — not just out of pain.</p>
+    <div class="mark"><div class="lock big" role="img" aria-label="Boundless Training and Rehab"><img src="assets/boundless-tr_logo.svg" alt=""></div></div>
+    <h1 class="tag"><span class="h">Don't hold back</span> <span class="g">doing what you love.</span></h1>
+    <p class="sublede">Doctor-led rehabilitation and performance training for people who intend to get all the way back, not just out of pain.</p>
     <div class="hero-cta">
       <a class="btn gold" href="#intake"><i class="fa-solid fa-pen-to-square"></i>Request a consult</a>
       <a class="btn ol" href="method.html"><i class="fa-solid fa-diagram-project"></i>See the method</a>
     </div>
   </div>
   <div class="hero-foot">
-    <div class="scrollcue"><i></i><span>Scroll</span></div>
-    <div>Dr. Brandon · DPT &nbsp;·&nbsp; 1:1 by appointment</div>
+    <div>Dr. Brandon Rosa · DPT &nbsp;·&nbsp; 1:1 by appointment</div>
   </div>
 </section>
 
@@ -333,6 +471,24 @@
   </div>
 </section>
 
+<!-- ═══ MISSION ═══ -->
+<section class="mis dark" id="mission" data-screen-label="Mission">
+  <div class="wrap">
+    <p class="eyebrow">Our mission</p>
+    <h2 class="mis-h"><span class="ln">Train <span class="g">Harder</span></span><span class="ln">Recover <span class="g">Faster</span></span><span class="ln c g">Live Life More!</span></h2>
+    <p class="mis-lead">Boundless Training &amp; Rehab is more than just physical therapy! It’s a system that’s been built perfectly blending recovery, fitness, and rehab.</p>
+    <p class="mis-kick">Too many people are held back by the limitations of life.</p>
+    <div class="mis-cells">
+      <div class="mis-c"><i class="fa-solid fa-bandage"></i><b>Injuries</b></div>
+      <div class="mis-c"><i class="fa-solid fa-hourglass-half"></i><b>Time</b></div>
+      <div class="mis-c"><i class="fa-solid fa-calendar-xmark"></i><b>Scheduling</b></div>
+      <div class="mis-c"><i class="fa-solid fa-shuffle"></i><b>Information overload</b><span>An overwhelming amount of it out there, leading to confusion and conflict.</span></div>
+    </div>
+    <div class="mis-team"><p>Most athletes have a whole team dedicated to helping them move better, feel better, and perform their best. <span class="g">Normal people don't.</span></p></div>
+    <div class="mis-close">That's where Boundless Training &amp; Rehab fills the gap.</div>
+  </div>
+</section>
+
 <!-- ═══ SERVICES ═══ -->
 <section class="svc" id="services" data-screen-label="Services">
   <div class="wrap">
@@ -347,6 +503,66 @@
       <div class="cell"><div class="ic"><i class="fa-solid fa-child-reaching"></i></div><h3>Youth athlete</h3><p>Middle school and up. Growing bodies, stacked seasons, and the overuse patterns that follow — handled before they become surgeries.</p></div>
       <div class="cell"><div class="ic"><i class="fa-solid fa-video"></i></div><h3>Remote programming</h3><p>Written programming with video check-ins for athletes who train elsewhere or pass through Tampa on a schedule.</p></div>
       <div class="cell ask"><div class="ic"><i class="fa-solid fa-circle-question"></i></div><h3>Not sure which one?</h3><p>That's what the consult is for. Describe what's going on and we'll tell you whether this is the right room.</p><a class="btn gold sm" href="#intake"><i class="fa-solid fa-pen-to-square"></i>Start here</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE MENU ═══ -->
+<section class="mn dark" id="menu" data-screen-label="Service Menu">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Service menu</p><h2>Don't hold back<br><span class="g">doing what you love.</span></h2></div>
+
+    <div class="mn-bar">One-off services</div>
+    <div class="mn-two">
+      <article class="mc">
+        <div class="mc-ic"><i class="fa-solid fa-hands"></i></div>
+        <h3>Boundless <span class="g">Revival Session</span></h3>
+        <p class="mc-meta"><span>60 min</span><b>$90</b></p>
+        <p>A full hour of customizable recovery treatments performed by a doctor of physical therapy. Revive your body and get back to feeling 100%.</p>
+        <p class="mc-sub">May include</p>
+        <ul class="chips"><li>Cupping</li><li>Graston (scraping)</li><li>Myofascial release</li><li>Therapeutic massage</li><li>Joint mobilization</li><li>And more</li></ul>
+      </article>
+      <article class="mc">
+        <div class="mc-ic"><i class="fa-solid fa-clipboard-check"></i></div>
+        <h3>Boundless <span class="g">Evaluation</span></h3>
+        <p class="mc-meta"><span>60 to 90 min</span><b>$90</b></p>
+        <p>Expert level injury, fitness and mobility evaluation to give you a detailed understanding of any current injuries or risk of future injury.</p>
+        <p class="mc-sub">What we look at</p>
+        <ul class="tick"><li><i class="fa-solid fa-circle-check"></i>Current injuries</li><li><i class="fa-solid fa-circle-check"></i>Risk factors</li><li><i class="fa-solid fa-circle-check"></i>Strength &amp; weakness</li><li><i class="fa-solid fa-circle-check"></i>Imbalances &amp; mobility restrictions</li><li><i class="fa-solid fa-circle-check"></i>Movement compensation</li><li><i class="fa-solid fa-circle-check"></i>Overall fitness</li></ul>
+      </article>
+    </div>
+
+    <div class="mn-bar">Training &amp; rehab packages</div>
+    <div class="mn-two">
+      <article class="mc">
+        <div class="mc-ic"><i class="fa-solid fa-user-doctor"></i></div>
+        <h3>In person <span class="g">packages</span></h3>
+        <p class="mc-req">Must have prior Boundless Evaluation</p>
+        <div class="plans">
+          <div class="plan"><div class="pl-t">1 month</div><div class="pl-h">1x weekly</div><div class="pl-n">4 x 1 hour treatment sessions</div></div>
+          <div class="plan"><div class="pl-t">1 month</div><div class="pl-h">2x weekly</div><div class="pl-n">8 x 1 hour treatment sessions</div></div>
+        </div>
+        <ul class="inc"><li><i class="fa-solid fa-laptop-medical"></i>1 month on call digital support &amp; fitness program</li></ul>
+      </article>
+      <article class="mc">
+        <div class="mc-ic"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Hybrid <span class="g">packages</span></h3>
+        <p class="mc-req">Must have prior Boundless Evaluation</p>
+        <ul class="inc">
+          <li><i class="fa-solid fa-file-pen"></i>1.5 hour in-person re-evaluation (monthly)</li>
+          <li><i class="fa-solid fa-laptop-medical"></i>1 month on call digital support &amp; fitness program</li>
+          <li><i class="fa-solid fa-graduation-cap"></i>Wellness education &amp; 2x weekly check-ins</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="mn-cta">
+      <div class="mn-cta-t"><div class="a">Need an appointment?</div><div class="b">Call, text, or send a consult request. Dr. Brandon Rosa, DPT</div></div>
+      <div class="mn-cta-b">
+        <a class="btn" href="tel:+14079529371"><i class="fa-solid fa-phone"></i>407-952-9371</a>
+        <a class="btn o" href="sms:+14079529371"><i class="fa-solid fa-comment-sms"></i>Text</a>
+        <a class="btn o" href="#intake"><i class="fa-solid fa-pen-to-square"></i>Request a consult</a>
+      </div>
     </div>
   </div>
 </section>
@@ -368,11 +584,12 @@
 <!-- ═══ STATS ═══ -->
 <section class="stats" data-screen-label="Numbers">
   <div class="wrap">
+    <div class="shead stats-h"><p class="eyebrow">By the numbers</p><h2>What working with Dr. Rosa looks like.</h2></div>
     <div class="stats-g">
-      <div class="stat"><div class="v">90<sup>min</sup></div><div class="k">Initial evaluation — the whole hour and a half is yours</div></div>
-      <div class="stat"><div class="v">1<sup>:1</sup></div><div class="k">Every session with the doctor. No techs, no handoffs</div></div>
-      <div class="stat"><div class="v">12<sup>wk</sup></div><div class="k">Typical protocol from first visit to full clearance</div></div>
-      <div class="stat"><div class="v">0</div><div class="k">Patients sent home with "rest it and see"</div></div>
+      <div class="stat"><div class="v">90<sup>min</sup></div><div class="k"><b>Initial evaluation</b>The whole hour and a half is yours</div></div>
+      <div class="stat"><div class="v">1<sup>:1</sup></div><div class="k"><b>Every session</b>With the doctor. No techs, no handoffs</div></div>
+      <div class="stat"><div class="v">12<sup>wk</sup></div><div class="k"><b>Typical protocol</b>From first visit to full clearance</div></div>
+      <div class="stat"><div class="v">0</div><div class="k"><b>Patients sent home</b>With "rest it and see"</div></div>
     </div>
   </div>
 </section>
@@ -380,12 +597,12 @@
 <!-- ═══ DOCTOR ═══ -->
 <section class="doc" id="doctor" data-screen-label="Dr. Brandon">
   <div class="wrap">
-    <div class="shead"><p class="eyebrow">Who you'll work with</p><h2>Dr. Brandon, DPT</h2></div>
+    <div class="shead"><p class="eyebrow">Who you'll work with</p><h2>Dr. Brandon Rosa, DPT</h2></div>
     <div class="doc-g">
       <div class="portrait">
         <i class="fa-solid fa-camera"></i>
         <span>Portrait<br>to come</span>
-        <div class="badge">Dr. Brandon · DPT</div>
+        <div class="badge">Dr. Brandon Rosa · DPT</div>
       </div>
       <div class="body">
         <h2>Rehab that<br><span class="h">doesn't stop</span><br><span class="g">at pain-free.</span></h2>
@@ -463,7 +680,7 @@
   <div class="wrap">
     <div class="shead"><p class="eyebrow">Before you book</p><h2>Questions.</h2></div>
     <details class="qa"><summary><span>Do I need a referral?</span><i class="fa-solid fa-plus"></i></summary><p>In most cases no — you can be evaluated directly. If your situation needs a physician's input, we'll tell you at the evaluation and coordinate rather than string you along.</p></details>
-    <details class="qa"><summary><span>How does payment work?</span><i class="fa-solid fa-plus"></i></summary><p>We'll walk you through the options at the consult, including documentation you can submit for out-of-network reimbursement or HSA/FSA use. You'll know the exact cost of your plan before you commit to it.</p></details>
+    <details class="qa"><summary><span>How does payment work?</span><i class="fa-solid fa-plus"></i></summary><p>Prices are on the service menu above. The Revival Session and the Boundless Evaluation are $90 each. Packages need a Boundless Evaluation first, and we'll walk you through the options at the consult, including documentation you can submit for out-of-network reimbursement or HSA/FSA use. You'll know the exact cost of your plan before you commit to it.</p></details>
     <details class="qa"><summary><span>How is this different from regular PT?</span><i class="fa-solid fa-plus"></i></summary><p>Two things: you work with the doctor every session, and the plan doesn't end when the pain does. Most clinics discharge at pain-free. We keep going until you've tested ready for the thing you actually want to do.</p></details>
     <details class="qa"><summary><span>What should I bring to the first visit?</span><i class="fa-solid fa-plus"></i></summary><p>Training clothes you can move and sweat in, any imaging or surgical notes you have, and a clear idea of the activity you want to get back to. That goal shapes the whole plan.</p></details>
     <details class="qa"><summary><span>Can you work with me remotely?</span><i class="fa-solid fa-plus"></i></summary><p>Yes — remote programming and video check-ins are available once we've done an in-person evaluation, or on their own for straightforward strength and load management work.</p></details>
@@ -485,10 +702,11 @@
     <div>
       <p class="eyebrow">Start here</p>
       <h2>Stop managing it.<br><span class="g">Start training it.</span></h2>
-      <p class="lede">Tell me what's going on and what you want back. I read every one of these myself and reply with whether this is the right room for it — no packages pitched at you.</p>
+      <p class="lede">Tell me what's going on and what you want back. I read every one of these myself and reply with whether this is the right room for it. No hard sell.</p>
       <div class="cta2">
         <a class="btn gold" href="#intake"><i class="fa-solid fa-pen-to-square"></i>Request a consult</a>
-        <a class="btn ol" href="mailto:brandone@boundlesstr.com"><i class="fa-solid fa-envelope"></i>Email instead</a>
+        <a class="btn ol" href="tel:+14079529371"><i class="fa-solid fa-phone"></i>Call or text</a>
+        <a class="btn ol" href="mailto:brandone@boundlesstr.com"><i class="fa-solid fa-envelope"></i>Email</a>
       </div>
     </div>
     <div class="form-card" id="intake">
@@ -529,21 +747,126 @@
     <div class="strip-g">
       <div class="inf"><i class="fa-solid fa-location-dot"></i><div><div class="l">Location</div><div class="v">Tampa, Florida<br><span style="color:var(--mut)">Exact address on booking</span></div></div></div>
       <div class="inf"><i class="fa-solid fa-clock"></i><div><div class="l">Hours</div><div class="v">By appointment only<br><span style="color:var(--mut)">7–10a · 12–3p · 5–8p</span></div></div></div>
+      <div class="inf"><i class="fa-solid fa-phone"></i><div><div class="l">Call or text</div><div class="v"><a href="tel:+14079529371">407-952-9371</a></div></div></div>
       <div class="inf"><i class="fa-solid fa-envelope"></i><div><div class="l">Email</div><div class="v"><a href="mailto:brandone@boundlesstr.com">brandone@boundlesstr.com</a></div></div></div>
-      <div class="inf"><i class="fa-brands fa-instagram"></i><div><div class="l">Instagram</div><div class="v"><a href="https://instagram.com/dr.brandon.boundless" target="_blank" rel="noopener">@dr.brandon.boundless</a></div></div></div>
+      <div class="inf"><i class="fa-brands fa-instagram"></i><div><div class="l">Instagram</div><div class="v"><a href="https://instagram.com/dr.brandon.boundless" target="_blank" rel="noopener">@dr.brandon.boundless</a><br><a href="#" aria-label="TikTok">TikTok</a></div></div></div>
     </div>
   </div>
 </section>
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <img src="assets/logo-boundless.png" alt="Boundless Training &amp; Rehab">
-    <span>© 2026 Boundless Training &amp; Rehab · Dr. Brandon, DPT · Tampa, FL</span>
-    <div class="social">
-      <a href="https://instagram.com/dr.brandon.boundless" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="mailto:brandone@boundlesstr.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-    </div>
+    <span class="lock" aria-label="Boundless Training &amp; Rehab"><img src="assets/boundless-tr_logo-horizontal.svg" alt="Boundless Training and Rehab"></span>
+    <span>© 2026 Boundless Training &amp; Rehab · Dr. Brandon Rosa, DPT · Tampa, FL</span>
   </div>
 </footer>
+<div class="gauge" aria-hidden="true">
+  <span class="gv d" data-laps="1"><svg viewBox="0 0 120 32" focusable="false"><path class="gb" d="M0 16H16L20 16L23 6L28 27L32 11L35 16H52L55 16L58 4L65 29L69 9L72 16H90L93 16L96 7L101 24L104 16H120"/><path class="gl" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M0 16H16L20 16L23 6L28 27L32 11L35 16H52L55 16L58 4L65 29L69 9L72 16H90L93 16L96 7L101 24L104 16H120"/><circle class="gd" cx="0" cy="16" r="3"/><circle class="gd pulse" cx="0" cy="16" r="3"/></svg></span><span class="gv t" data-laps="2"><svg viewBox="0 0 80 32" focusable="false"><path class="gb" d="M0 16H8L11 16L14 5L19 28L23 10L26 16H40L43 16L46 5L51 28L55 10L58 16H80"/><path class="gl" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M0 16H8L11 16L14 5L19 28L23 10L26 16H40L43 16L46 5L51 28L55 10L58 16H80"/><circle class="gd" cx="0" cy="16" r="3"/><circle class="gd pulse" cx="0" cy="16" r="3"/></svg></span><span class="gv p" data-laps="3"><svg viewBox="0 0 44 32" focusable="false"><path class="gb" d="M0 16H10L13 16L16 5L21 28L25 10L28 16H44"/><path class="gl" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M0 16H10L13 16L16 5L21 28L25 10L28 16H44"/><circle class="gd" cx="0" cy="16" r="3"/><circle class="gd pulse" cx="0" cy="16" r="3"/></svg></span>
+  <div class="gr"><span class="gn">0</span><small>%</small></div>
+  <div class="pips"><i class="pip"></i><i class="pip"></i><i class="pip"></i></div>
+</div>
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.gauge .gv')).map(function(el){
+    var gl=el.querySelector('.gl'),d=el.querySelectorAll('.gd');
+    return {gl:gl,d:d,laps:+el.getAttribute('data-laps')||1,len:gl.getTotalLength()};
+  });
+  var nums=document.querySelectorAll('.gauge .gn'),pips=document.querySelectorAll('.gauge .pip'),tick=false;
+  if(!items.length)return;
+  function upd(){
+    tick=false;
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    var p=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
+    var lap=0;
+    items.forEach(function(it){
+      var q=p,l=0;
+      if(it.laps>1){l=p>=1?it.laps:Math.floor(p*it.laps);q=p>=1?1:(p*it.laps)%1;lap=l;}
+      it.gl.style.strokeDashoffset=String(1-q);
+      var pt=it.gl.getPointAtLength(it.len*q);
+      for(var i=0;i<it.d.length;i++){it.d[i].setAttribute('cx',pt.x);it.d[i].setAttribute('cy',pt.y);}
+    });
+    for(var i=0;i<pips.length;i++){pips[i].classList.toggle('on',i<lap);}
+    for(var j=0;j<nums.length;j++){nums[j].textContent=Math.round(p*100);}
+  }
+  window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd);}},{passive:true});
+  window.addEventListener('resize',upd);
+  upd();
+})();
+</script>
+<script>
+(function(){
+  if(!window.matchMedia||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var skip=/(^|\s)(shead|mn-cta|plans|form-card|gauge)(\s|$)/;
+  var secs=document.querySelectorAll('section:not(.hero):not(.mast), footer.foot');
+  var units=[];
+  [].forEach.call(secs,function(sec){
+    var box=sec.querySelector(':scope > .wrap')||sec,list=[];
+    [].forEach.call(box.children,function(ch){
+      if(ch.tagName==='SCRIPT'||ch.tagName==='STYLE'||ch.tagName==='INPUT')return;
+      var cs=getComputedStyle(ch);
+      if((cs.display==='grid'||ch.classList.contains('weeks')||ch.classList.contains('phases'))&&ch.children.length>1&&!skip.test(ch.className)){
+        [].forEach.call(ch.children,function(g){list.push(g);});
+      }else list.push(ch);
+    });
+    list.forEach(function(el,i){
+      el._rvi=i;units.push(el);
+    });
+  });
+  function side(el){var r=el.getBoundingClientRect();return (r.left+r.width/2)>window.innerWidth/2+1;}
+  var dirs=units.map(side);
+  units.forEach(function(el,k){
+    el.classList.add('rv');
+    if(dirs[k])el.classList.add('r');
+    el.style.setProperty('--rvd',(Math.min(el._rvi,3)*0.07)+'s');
+  });
+  var rt;
+  window.addEventListener('resize',function(){
+    clearTimeout(rt);rt=setTimeout(function(){
+      units.forEach(function(el){
+        if(!el.classList.contains('rv')||el.classList.contains('in'))return;
+        var r=el.getBoundingClientRect(),m=new DOMMatrixReadOnly(getComputedStyle(el).transform),cx=r.left+r.width/2-m.m41;
+        el.classList.toggle('r',cx>window.innerWidth/2+1);
+      });
+    },150);
+  });
+  document.documentElement.classList.add('rv-on');
+  var pend=units.slice(),tick=false;
+  function reveal(el){
+    el.classList.add('in');
+    setTimeout(function(){el.classList.remove('rv','r','in');el.style.removeProperty('--rvd');},1500);
+  }
+  function check(){
+    tick=false;
+    var line=window.innerHeight*0.92;
+    var atEnd=window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-4;
+    pend=pend.filter(function(el){
+      if(atEnd||el.getBoundingClientRect().top<line){reveal(el);return false;}
+      return true;
+    });
+    if(!pend.length){window.removeEventListener('scroll',onScroll);}
+  }
+  function onScroll(){if(!tick){tick=true;requestAnimationFrame(check);}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  requestAnimationFrame(check);
+})();
+</script>
+<script>
+(function(){
+  var ph=document.querySelector('.method .phases');
+  if(!ph)return;
+  var tick=false;
+  function upd(){
+    tick=false;
+    var y=window.innerHeight*0.6,r=ph.getBoundingClientRect();
+    var first=ph.firstElementChild,last=ph.lastElementChild,rh=Math.max(1,last.offsetTop-first.offsetTop);
+    ph.style.setProperty('--rh',rh+'px');
+    ph.style.setProperty('--p',Math.max(0,Math.min(1,(y-(r.top+first.offsetTop+12))/rh)));
+    [].forEach.call(ph.children,function(c){c.classList.toggle('on',c.getBoundingClientRect().top+10<y);});
+  }
+  function on(){if(!tick){tick=true;requestAnimationFrame(upd);}}
+  window.addEventListener('scroll',on,{passive:true});window.addEventListener('resize',on);upd();
+})();
+</script>
 </body>
 </html>
