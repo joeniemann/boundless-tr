@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Method — Boundless Training &amp; Rehab</title>
-<meta name="description" content="Twelve weeks, measured end to end. The Boundless method: assess, rebuild, load, release — with the testing battery and discharge standards behind it.">
+<title>The Method | Boundless Training &amp; Rehab</title>
+<meta name="description" content="Twelve weeks, measured end to end. The Boundless method: assess, rebuild, load, release, with the testing battery and discharge standards behind it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -134,6 +134,42 @@
   .cta p{margin-left:auto;margin-right:auto}
   .cta .row{justify-content:center}
 }
+
+/* round 9: timeline rail like the homepage, measured cards, case fits */
+.weeks{border-left:0;margin-left:0!important;padding-left:40px;position:relative}
+.weeks::before{content:"";position:absolute;left:8px;top:11px;height:var(--rh,0px);width:2px;background:rgba(0,0,0,.16)}
+.weeks::after{content:"";position:absolute;left:8px;top:11px;width:2px;height:calc(var(--rh,0px)*var(--p,0));background:var(--goldd)}
+.wk{position:relative;padding:0 0 46px!important}
+.wk:last-child{padding-bottom:0!important}
+.wk::before{left:-40px;top:2px;width:18px;height:18px;box-sizing:border-box;border-radius:50%;background:var(--bone);border:2px solid var(--goldd);transition:background .4s,box-shadow .4s}
+.wk.on::before{background:var(--goldd);box-shadow:0 0 0 6px rgba(122,96,0,.16)}
+@media(min-width:1040px){
+  .weeks{padding-left:0}
+  .weeks::before,.weeks::after{left:50%;margin-left:-1px;top:13px}
+  .wk{width:calc(50% - 56px);padding-bottom:56px!important}
+  .wk:last-child{padding-bottom:0!important}
+  .wk:nth-child(odd){margin-right:auto;text-align:right}
+  .wk:nth-child(even){margin-left:auto}
+  .wk::before{top:4px}
+  .wk:nth-child(odd)::before{left:auto;right:-65px}
+  .wk:nth-child(even)::before{left:-65px}
+  .wk .body{grid-template-columns:1fr;gap:16px}
+  .wk:nth-child(odd) li{flex-direction:row-reverse;text-align:right}
+}
+.bat .shead h2.oneline{white-space:nowrap;font-size:clamp(17px,5.6vw,34px)}
+@media(min-width:700px){.bat .shead h2.oneline{font-size:clamp(28px,3.6vw,40px)}}
+.bt{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:center;align-content:start}
+.bt .ic{font-size:22px;width:28px;text-align:center}
+.bt h3{margin:0}
+.bt p,.bt .std{grid-column:1/-1}
+.bt p{margin-top:16px}
+.case .big{font-size:clamp(20px,5.2vw,40px)}
+.case .big{white-space:nowrap}
+.case-top{grid-template-columns:1fr!important;gap:24px!important}
+@media(min-width:1040px){.case-top{grid-template-columns:1.25fr 1fr!important;gap:40px!important}.case .big{font-size:clamp(30px,3.2vw,40px)}}
+.bar{grid-template-columns:auto 1fr 40px;white-space:nowrap;letter-spacing:.06em}
+.bar span:first-child{min-width:7.5em}
+@media(min-width:1040px){.stp{padding-left:18px;padding-right:18px}.stp:first-child{padding-left:0}.bar{grid-template-columns:auto 1fr 38px;gap:8px}}
 </style>
 </head>
 <body>
@@ -170,7 +206,7 @@
   <div class="wrap mast-in">
     <p class="eyebrow crumb"><a href="index.html">Boundless</a><i class="fa-solid fa-angle-right"></i><span class="g">The Method</span></p>
     <h1>Twelve weeks,<br><span class="h">measured</span> <span class="g">end to end.</span></h1>
-    <p>Nothing here is decided by feel. Every phase has an entry standard, a set of numbers we track, and a defined reason to progress you — or hold you back another week.</p>
+    <p>Nothing here is decided by feel. Every phase has an entry standard and a set of numbers we track. Hit them and you move on. Miss them and you stay another week.</p>
   </div>
 </section>
 
@@ -184,17 +220,17 @@
           <p>History first, then testing. We find out what the tissue can tolerate today and what the rest of the chain is doing to compensate. You leave the room with your numbers and the plan built on them.</p>
           <ul><li><i class="fa-solid fa-play"></i><span>Full-body movement screen and joint-by-joint range</span></li><li><i class="fa-solid fa-play"></i><span>Strength and symmetry testing on the involved side</span></li><li><i class="fa-solid fa-play"></i><span>Your goal activity defined in specifics, not vibes</span></li></ul>
         </div></div>
-      <div class="wk"><span class="tm">Weeks 1–4</span><h3>Rebuild the base</h3>
+      <div class="wk"><span class="tm">Weeks 1 to 4</span><h3>Rebuild the base</h3>
         <div class="body">
-          <p>Calm what's irritated, restore the range you're missing, and rebuild the capacity the injured area quietly lost. Hands-on work shows up only where it earns its place — everything else is loaded movement.</p>
+          <p>Calm what's irritated, restore the range you're missing, and rebuild the capacity the injured area quietly lost. Hands-on work shows up only where it earns its place. Everything else is loaded movement.</p>
           <ul><li><i class="fa-solid fa-play"></i><span>Range restored to within 5° of the healthy side</span></li><li><i class="fa-solid fa-play"></i><span>Pain predictable and controlled during loading</span></li><li><i class="fa-solid fa-play"></i><span>Homework: two to three short sessions a week</span></li></ul>
         </div></div>
-      <div class="wk"><span class="tm">Weeks 4–10</span><h3>Load it</h3>
+      <div class="wk"><span class="tm">Weeks 4 to 10</span><h3>Load it</h3>
         <div class="body">
-          <p>The phase most plans never reach. Progressive loading against measured targets, then speed and direction change. This is where rehab stops being rehab and becomes training — and where the gap actually closes.</p>
+          <p>The phase most plans never reach. Progressive loading against measured targets, then speed and direction change. This is where rehab stops being rehab and becomes training. It's also where the gap actually closes.</p>
           <ul><li><i class="fa-solid fa-play"></i><span>Heavy strength work through full range</span></li><li><i class="fa-solid fa-play"></i><span>Plyometric and reactive progressions</span></li><li><i class="fa-solid fa-play"></i><span>Re-tested every two weeks against your baseline</span></li></ul>
         </div></div>
-      <div class="wk"><span class="tm">Weeks 10–12</span><h3>Test and release</h3>
+      <div class="wk"><span class="tm">Weeks 10 to 12</span><h3>Test and release</h3>
         <div class="body">
           <p>Sport-specific testing under fatigue, because that's when things go wrong. If you pass, you get a written program to keep. If you don't, we know exactly which number is short and how long it takes to fix.</p>
           <ul><li><i class="fa-solid fa-play"></i><span>Return-to-sport battery, fatigued and fresh</span></li><li><i class="fa-solid fa-play"></i><span>Written program you own after discharge</span></li><li><i class="fa-solid fa-play"></i><span>Check-in scheduled at six weeks out</span></li></ul>
@@ -206,7 +242,7 @@
 <!-- ═══ BATTERY ═══ -->
 <section class="bat dark" data-screen-label="Testing">
   <div class="wrap">
-    <div class="shead"><p class="eyebrow">What gets measured</p><h2>No number,<br>no opinion.</h2></div>
+    <div class="shead"><p class="eyebrow">What gets measured</p><h2 class="oneline">No number, no opinion.</h2></div>
     <div class="bat-g">
       <div class="bt"><div class="ic"><i class="fa-solid fa-scale-balanced"></i></div><h3>Limb symmetry</h3><p>Side-to-side strength and power, tested in the positions your sport actually demands rather than a single seated angle.</p><div class="std">Target · ≥ 90% of healthy side</div></div>
       <div class="bt"><div class="ic"><i class="fa-solid fa-compass-drafting"></i></div><h3>Range of motion</h3><p>Measured joint by joint, plus the end-range control that tells us whether the range is usable under load.</p><div class="std">Target · within 5° both sides</div></div>
@@ -223,10 +259,10 @@
   <div class="wrap">
     <div class="shead"><p class="eyebrow">A session, start to finish · 60 minutes, 1:1</p><h2>Where the hour goes.</h2></div>
     <div class="ses-g">
-      <div class="blk"><span class="mins"><i class="fa-solid fa-clipboard-check"></i>0–10 min</span><h3>Check in and re-test</h3><p>What happened since last time, how the homework felt, and one or two quick measures so we're both working from today's numbers instead of last month's.</p></div>
-      <div class="blk"><span class="mins"><i class="fa-solid fa-hands"></i>10–20 min</span><h3>Prepare the tissue</h3><p>Targeted hands-on work and mobility — but only where it buys a better position for the loading that follows. It is never the whole session.</p></div>
-      <div class="blk"><span class="mins"><i class="fa-solid fa-dumbbell"></i>20–50 min</span><h3>Load and train</h3><p>The main event. Strength, power, or sport-specific work at the intensity your current phase calls for, coached rep by rep.</p></div>
-      <div class="blk"><span class="mins"><i class="fa-solid fa-file-pen"></i>50–60 min</span><h3>Debrief and program</h3><p>What changed, what's next, and exactly what to do between now and the next visit — written down, not explained once and forgotten.</p></div>
+      <div class="blk"><span class="mins"><i class="fa-solid fa-clipboard-check"></i>0 to 10 min</span><h3>Check in and re-test</h3><p>What happened since last time, how the homework felt, and one or two quick measures so we're both working from today's numbers instead of last month's.</p></div>
+      <div class="blk"><span class="mins"><i class="fa-solid fa-hands"></i>10 to 20 min</span><h3>Prepare the tissue</h3><p>Targeted hands-on work and mobility, but only where it buys a better position for the loading that follows. It's never the whole session.</p></div>
+      <div class="blk"><span class="mins"><i class="fa-solid fa-dumbbell"></i>20 to 50 min</span><h3>Load and train</h3><p>The main event. Strength, power, or sport-specific work at the intensity your current phase calls for, coached rep by rep.</p></div>
+      <div class="blk"><span class="mins"><i class="fa-solid fa-file-pen"></i>50 to 60 min</span><h3>Debrief and program</h3><p>What changed, what's next, and exactly what to do between now and the next visit. It's written down, not explained once and forgotten.</p></div>
     </div>
   </div>
 </section>
@@ -240,14 +276,14 @@
         <p class="eyebrow">Labral repair · 24-year-old pitcher</p>
         <h2 class="big">Cleared at ten weeks.<br><span class="h">Nowhere near</span> <span class="g">ready.</span></h2>
       </div>
-      <p class="quote">Discharged from a previous clinic pain-free with full range — and no plan for throwing. He could lift his arm overhead. He could not decelerate it. Those are entirely different problems, and only one of them ends a career.</p>
+      <p class="quote">Discharged from a previous clinic pain-free with full range, and with no plan for throwing. He could lift his arm overhead. He could not decelerate it. Those are different problems, and only one of them ends a career.</p>
     </div>
     <div class="steps">
       <div class="stp"><div class="wk2">Intake</div><h4>What we found</h4><p>External rotation strength at 61% of the other side and rate of force development well below where it needed to be. Range looked fine, which is exactly why he'd been discharged.</p>
         <div class="bars"><div class="bar"><span>ER strength</span><span class="tr"><i style="width:61%"></i></span><b>61%</b></div><div class="bar"><span>Decel control</span><span class="tr"><i style="width:44%"></i></span><b>44%</b></div></div></div>
-      <div class="stp"><div class="wk2">Weeks 1–5</div><h4>Rebuild</h4><p>Heavy isometrics into full-range strength work for the cuff and scapular chain, plus the trunk and hip work every throwing shoulder needs and rarely gets.</p>
+      <div class="stp"><div class="wk2">Weeks 1 to 5</div><h4>Rebuild</h4><p>Heavy isometrics into full-range strength work for the cuff and scapular chain, plus the trunk and hip work every throwing shoulder needs and rarely gets.</p>
         <div class="bars"><div class="bar"><span>ER strength</span><span class="tr"><i style="width:79%"></i></span><b>79%</b></div><div class="bar"><span>Decel control</span><span class="tr"><i style="width:63%"></i></span><b>63%</b></div></div></div>
-      <div class="stp"><div class="wk2">Weeks 5–11</div><h4>Load and throw</h4><p>Plyometric ball work, then a staged throwing progression tied to test results rather than the calendar. Two weeks were repeated when the numbers stalled.</p>
+      <div class="stp"><div class="wk2">Weeks 5 to 11</div><h4>Load and throw</h4><p>Plyometric ball work, then a staged throwing progression tied to test results rather than the calendar. Two weeks were repeated when the numbers stalled.</p>
         <div class="bars"><div class="bar"><span>ER strength</span><span class="tr"><i style="width:94%"></i></span><b>94%</b></div><div class="bar"><span>Decel control</span><span class="tr"><i style="width:88%"></i></span><b>88%</b></div></div></div>
       <div class="stp"><div class="wk2">Week 14</div><h4>Released</h4><p>Passed the full battery fatigued, cleared to a competitive mound with a written in-season maintenance program and a check-in six weeks out.</p>
         <div class="bars"><div class="bar"><span>ER strength</span><span class="tr"><i style="width:100%"></i></span><b>101%</b></div><div class="bar"><span>Decel control</span><span class="tr"><i style="width:97%"></i></span><b>97%</b></div></div></div>
@@ -260,11 +296,11 @@
   <div class="wrap">
     <div class="shead"><p class="eyebrow">Discharge standards</p><h2>What "ready"<br>has to mean.</h2></div>
     <div class="dis-g">
-      <div class="std2"><i class="fa-solid fa-scale-balanced"></i><div><h3>Symmetry, not sensation</h3><p>Strength and power within 10% of the uninvolved side — measured, not estimated by how it feels on a good day.</p></div></div>
+      <div class="std2"><i class="fa-solid fa-scale-balanced"></i><div><h3>Symmetry, not sensation</h3><p>Strength and power within 10% of the uninvolved side. Measured, not guessed from how it feels on a good day.</p></div></div>
       <div class="std2"><i class="fa-solid fa-person-falling-burst"></i><div><h3>Holds under fatigue</h3><p>You repeat the battery tired. Mechanics that fall apart at rep twenty are mechanics that fall apart in the fourth quarter.</p></div></div>
-      <div class="std2"><i class="fa-solid fa-bullseye"></i><div><h3>Sport-specific, not generic</h3><p>The final tests look like your actual sport — the cut, the throw, the lift — not a hallway walk and a thumbs up.</p></div></div>
+      <div class="std2"><i class="fa-solid fa-bullseye"></i><div><h3>Sport-specific, not generic</h3><p>The final tests look like your actual sport: the cut, the throw, the lift. Not a hallway walk and a thumbs up.</p></div></div>
       <div class="std2"><i class="fa-solid fa-brain"></i><div><h3>You believe it</h3><p>Confidence is scored. If you don't trust the limb yet, we keep working, because hesitation is its own injury risk.</p></div></div>
-      <div class="std2"><i class="fa-solid fa-file-lines"></i><div><h3>You leave with a program</h3><p>A written plan for staying there. Discharge is the start of maintenance, not the end of the work.</p></div></div>
+      <div class="std2"><i class="fa-solid fa-file-lines"></i><div><h3>You leave with a program</h3><p>A written plan for staying there. Discharge is where maintenance starts.</p></div></div>
       <div class="std2"><i class="fa-solid fa-phone-volume"></i><div><h3>The door stays open</h3><p>A scheduled check-in six weeks out, and a standing answer to questions after that.</p></div></div>
     </div>
     <p class="close">If we can't show you the numbers,<br>we haven't finished the job.</p>
@@ -392,6 +428,23 @@
   window.addEventListener('scroll',onScroll,{passive:true});
   window.addEventListener('resize',onScroll);
   requestAnimationFrame(check);
+})();
+</script>
+<script>
+(function(){
+  var ph=document.querySelector('.weeks');
+  if(!ph)return;
+  var tick=false;
+  function upd(){
+    tick=false;
+    var y=window.innerHeight*0.6,r=ph.getBoundingClientRect();
+    var first=ph.firstElementChild,last=ph.lastElementChild,rh=Math.max(1,last.offsetTop-first.offsetTop);
+    ph.style.setProperty('--rh',rh+'px');
+    ph.style.setProperty('--p',Math.max(0,Math.min(1,(y-(r.top+first.offsetTop+12))/rh)));
+    [].forEach.call(ph.children,function(c){c.classList.toggle('on',c.getBoundingClientRect().top+10<y);});
+  }
+  function on(){if(!tick){tick=true;requestAnimationFrame(upd);}}
+  window.addEventListener('scroll',on,{passive:true});window.addEventListener('resize',on);upd();
 })();
 </script>
 </body>
